@@ -1,0 +1,18 @@
+body {
+  background: #cdd6e8;
+  background: -webkit-linear-gradient( to bottom, #f7f7f7, #cdd6e8);
+  background: linear-gradient(180deg, #f7f7f7, #cdd6e8) no-repeat fixed;
+}
+
+.hero .hero-body {
+  padding: 4rem !important;
+}
+
+div#contruction-container {
+  margin-top: -60px;
+}
+
+img#landing-logo {
+  transform: scale(0.5);
+  padding-left: 60px;
+}
