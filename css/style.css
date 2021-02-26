@@ -37,16 +37,12 @@ a:focus {
   transition: all var(--animation-duration);
 }
 
-.btn {
-  font-family: 'Noto Sans', sans-serif !important;
-}
-
 .placeholder {
   background-color: #f8f8f8;
 }
 
 .header .nav-item a#home-nav {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 /*---------------------------------------------------------------*/
@@ -71,6 +67,7 @@ a {
 
 button {
   font-size: 0.9em;
+  font-family: 'Noto Sans', sans-serif !important;
 }
 
 .clearfix {
