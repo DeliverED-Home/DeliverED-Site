@@ -8,11 +8,10 @@ img.style.right = 10 + 'vw';
 
 window.addEventListener('scroll', function() {
   var scrollTop = window.pageYOffset || window.scrollTop;
-  var scrollPercent = -scrollTop/scrollArea || 0;
+  var scrollPercent = scrollTop/scrollArea || 0;
 
-  img.style.right = 10 + scrollPercent + 'vw';
-  img.style.top = -1*scrollPercent + 'vw';
-  console.log("hi");
+  img.style.right = 10 + (-0.5* Math.sqrt(scrollPercent * window.scrollY)) * 0.5 + 'vw';
+  img.style.top = (-0.5* Math.sqrt(scrollPercent * window.scrollY)) * 0.5 + 'vw';
 });
 
 $(window).scroll(function() {
