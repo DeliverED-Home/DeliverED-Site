@@ -14,3 +14,11 @@ window.addEventListener('scroll', function() {
   img.style.top = -1*scrollPercent + 'vw';
   console.log("hi");
 });
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('.header').addClass('nav-w-bg');
+  } else {
+    $('.header').removeClass('nav-w-bg');
+  }
+});

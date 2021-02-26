@@ -8,7 +8,8 @@
 .header-clear-mod {
   background-color: transparent;
   box-shadow: none;
-  padding: 2.5rem 5rem;
+  margin: 2.5rem 5rem;
+  width: calc(100vw - 10rem);
 }
 
 .header:not(.header-clear) .nav-item:not(.no-hover).hovered, .header:not(.header-clear) .nav-item:not(.no-hover):hover {
@@ -115,6 +116,13 @@ img#nav-logo {
   height: 5vh;
 }
 
+.nav-w-bg {
+  padding: 10px 10px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 3px 27px rgba(23, 27, 33, 0.16);
+}
+
 /*---------------------------------------------------------------*/
 /* HOME PAGE */
 /*---------------------------------------------------------------*/
@@ -189,11 +197,6 @@ p#home-subtext {
 .main-nav li a:active {
   border-bottom: 2px solid #6D6CDE;
 }
-
-/*---------------------------------------------------------------*/
-/* COMMENTS PAGE */
-/*---------------------------------------------------------------*/
-
 
 /*---------------------------------------------------------------*/
 /* KEYFRAMES, WEBKIT ETC. */
