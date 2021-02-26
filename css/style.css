@@ -85,10 +85,9 @@ button {
 
 .section {
   min-height: 100vh;
-  padding: 80px 0;
   width: 100%;
-  clear: both;
-  padding: 0 5rem;
+  height: 100%;
+  padding: 100px 5rem 0 5rem;
 }
 
 img#blue-blob {
@@ -116,18 +115,29 @@ img#nav-logo {
 /*---------------------------------------------------------------*/
 /* HOME PAGE */
 /*---------------------------------------------------------------*/
-div#branding {
+div#house-container {
+  float: right;
+  position: relative;
+  width: 50% !important;
+  height: 100%;
+}
+
+div#branding-container {
   float: left;
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+div#branding {
+  bottom: 6vh;
   position: absolute;
-  bottom: 10vh;
 }
 
 img#home-img {
-  float: right;
-  width: 40vw;
+  transform: scale(1.15);
+  padding-top: 10vh;
   position: absolute;
-  margin-top: 15vh;
-  right: 0;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -136,23 +146,26 @@ img#home-img {
 }
 
 img#home-logo {
-  width: 40vw;
+  width: 30vw;
   position: relative;
 }
 
 h1#home-text {
-  margin-left: -0.2vw;
-  font-size: 5vw;
+  font-size: 6vw;
   font-family: 'Noto Sans', sans-serif;
   color: #6680c1;
+  letter-spacing: -12px;
+  margin-top: -1vh;
+  margin-left: -.25vw;
 }
 
 p#home-subtext {
-  color: #4e6496;
-  margin: -2vh 0 0 0.25vw;
+  color: rgb(41, 43, 52);
+  margin: -3.5vh 0 0 0.5vw;
   font-size: 2vw;
   font-family: 'Arapey', serif;
-  font-style: italic;
+  font-style: oblique;
+  letter-spacing: -1px;
 }
 
 .top-logo {
@@ -168,24 +181,6 @@ p#home-subtext {
   display: flex;
   justify-content: space-around;
   margin-top: 45px;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 120%;
-  border-bottom: 2px solid transparent;
-  -webkit-transition: border-bottom 0.2s;
-  transition: border-bottom 0.2s;
-  margin-right: 25px;
-  border: 1px solid transparent;
-}
-
-.main-nav li a:hover,
-.main-nav li a:active {
-  border-bottom: 2px solid #6D6CDE;
 }
 
 /*---------------------------------------------------------------*/
