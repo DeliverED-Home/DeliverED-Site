@@ -1,17 +1,16 @@
-window.scroll({
-  top: 2500,
-  left: 0,
-  behavior: 'smooth'
-});
+var container = document.getElementById('home');
+var windowHeight = window.innerHeight;
+var windowWidth = window.innerWidth;
+var scrollArea = 1000 - windowHeight;
+var img = document.getElementById('home-img');
 
-// Scroll certain amounts from current position
-window.scrollBy({
-  top: 100, // could be negative value
-  left: 0,
-  behavior: 'smooth'
-});
+img.style.right = 10 + 'vw';
 
-// Scroll to a certain element
-document.querySelector('.hello').scrollIntoView({
-  behavior: 'smooth'
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset || window.scrollTop;
+  var scrollPercent = -scrollTop/scrollArea || 0;
+
+  img.style.right = 10 + scrollPercent + 'vw';
+  img.style.top = -1*scrollPercent + 'vw';
+  console.log("hi");
 });
