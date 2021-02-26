@@ -1,111 +1,172 @@
-body {
-  background: #cdd6e8;
-  background: -webkit-linear-gradient( to bottom, #f7f7f7, #cdd6e8);
-  background: linear-gradient(180deg, #f7f7f7, #cdd6e8) no-repeat fixed;
-}
-
+/*---------------------------------------------------------------*/
+/* MODS TO CIRRUS-UI */
+/*---------------------------------------------------------------*/
 .hero .hero-body {
   padding: 4rem !important;
 }
 
-div#contruction-container {
-  margin-top: -60px;
+.header-clear-mod {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 1.5rem;
 }
 
-img#landing-logo {
-  margin-bottom: 10px;
+.header:not(.header-clear) .nav-item:not(.no-hover).hovered, .header:not(.header-clear) .nav-item:not(.no-hover):hover {
+  background-color: transparent !important;
 }
-.clearfix {zoom: 1;}
+
+a:focus {
+  box-shadow: none !important;
+}
+
+.u::after {
+  height: .15rem !important;
+  background: #6680c1 !important;
+}
+
+.btn.btn-info, [type=button].btn-info, [type=reset].btn-info, [type=submit].btn-info, button.btn-info {
+  --btn-color: #6680c1;
+  --btn-fg: var(--cirrus-light);
+  --btn-border-color: #6680c1;
+}
+
+[class*=' btn-']:not(.btn-container):not(.btn-close).outline:hover, [class^=btn-]:not(.btn-container):not(.btn-close).outline:hover {
+  background-color: #6680c1;
+  color: var(--btn-fg);
+  transition: all var(--animation-duration);
+}
+
+.btn {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+.placeholder {
+  background-color: #f8f8f8;
+}
+
+/*---------------------------------------------------------------*/
+/* UNIVERSAL STYLES */
+/*---------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e7eefa;
+  background: -webkit-linear-gradient(to bottom, #f7f7f7, #e7eefa);
+  background: linear-gradient(235deg, #f7f7f7, #e7eefa) no-repeat fixed;
+}
+
+a {
+  font-size: 1.1em !important;
+  color: #6680c1 !important;
+}
+
+button {
+  font-size: 0.9em;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
 .clearfix:after {
-    content: ".";
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 
-section {
-    padding: 80px 0;
+.section {
+  height: 100vh;
+  padding: 80px 0;
+}
+
+img#blue-blob {
+  position: fixed;
+  z-index: -99;
+  left: -35%;
+  top: -25%;
+  opacity: 0.3;
+}
+
+img#mag-blob {
+  position: fixed;
+  z-index: -99;
+  right: -35%;
+  bottom: -25%;
+  opacity: 0.5;
+}
+
+/*---------------------------------------------------------------*/
+/* NAV BAR */
+/*---------------------------------------------------------------*/
+img#nav-logo {
+  height: 5vh;
 }
 
 /*---------------------------------------------------------------*/
 /* HOME PAGE */
 /*---------------------------------------------------------------*/
-
-header {
-    background-image: url(background1.png);
-    background-size: cover;
-    height: 90vh;
+div#branding {
+  position: absolute;
+  bottom: 10vh;
+  left: 2vw;
 }
 
-.home-subtext {
-    font-size: 25px;
-    color: grey;
-    margin-top: 30px;
-    margin-left: 25px;
+img#home-logo {
+  width: 50vw;
 }
 
-.head-logo {
-    margin-top: 216px;
-    margin-left: 25px;
-    width: 40%;
+h1#home-text {
+  margin-left: -0.2vw;
+  font-size: 6em;
+  font-family: 'Noto Sans', sans-serif;
+  color: #6680c1;
 }
 
-.home-text {
-    text-transform: uppercase;
-    margin-left: 55px;
-    font-size: 45px;
+p#home-subtext {
+  color: #4e6496;
+  margin: -2vh 0 0 0.25vw;
+  font-size: 2em;
+  font-family: 'Arapey', serif;
+  font-style: italic;
 }
 
 .top-logo {
-    width: 110px;
-    height: 110px;
-    margin-left: 35px;
-    margin-top: 10px;
+  width: 110px;
+  height: 110px;
+  margin-left: 35px;
+  margin-top: 10px;
 }
 
 .main-nav {
-    float: left;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 45px;
+  float: left;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 45px;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 120%;
-    border-bottom: 2px solid transparent;
-    -webkit-transition: border-bottom 0.2s;
-    transition: border-bottom 0.2s;
-    margin-right: 25px;
-    border: 1px solid transparent;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 120%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+  margin-right: 25px;
+  border: 1px solid transparent;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #6D6CDE;
+  border-bottom: 2px solid #6D6CDE;
 }
-
 
 /*---------------------------------------------------------------*/
 /* COMMENTS PAGE */
 /*---------------------------------------------------------------*/
-
-.page-head {
-    padding: 0 25px;
-}
-
-.dummy {
-    float:left;
-    padding: 0 30px;
-}
-
-
-
-
-
-

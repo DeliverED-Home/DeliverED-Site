@@ -10,8 +10,10 @@
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
@@ -19,39 +21,56 @@
 </head>
 
 <body>
-    
-    <header>
-        <nav>
-            <div class="row">
-                <img src="assets/img/small-logo-blue-final.png" alt="DeliverEd Logo" class="top-logo">
-                <ul class="main-nav">
-                    <li> <a href="#system">System</a> </li>
-                    <li> <a href="#how-it-works">How It Works</a> </li>
-                    <li> <a href="#budget">Budget</a> </li>
-                    <li> <a href="#team">The Team</a> </li>
-                    <li> <a href="#evaluation">Evaluation</a> </li>
-                    <li> <a href="#comments">Comments</a> </li>
-                    <li> <a href="#user-guide">User Guide</a> </li>
-                </ul>
-            </div>
-        </nav>
-            <div>
-                <img src="assets/img/long-logo-blue-2.png" alt="DeliverEd logo" class="head-logo">
-                <h1 class="home-text">Home</h1>
-                <h2 class="home-subtext"><em>A Smart Mailbox For All Your Home Delivery Needs.</em></h2>
-            </div>
-    </header>
-    
- <div class="hero fullscreen" id="system">
+  <img src="assets/img/blue-blob.png" id="blue-blob">
+  <img src="assets/img/magenta-blob.png" id="mag-blob">
+
+  <!-- Need a new style for when scrolling past landing screen - give a background colour and an animation -->
+  <div class="header header-fixed header-clear-mod">
+    <div class="header-brand">
+      <div class="nav-item no-hover">
+        <a href="#home"><img src="assets/img/small-logo-blue-final.png" alt="" id="nav-logo"></a>
+      </div>
+    </div>
+    <div class="header-nav" id="header-menu">
+      <div class="nav-right">
+        <div class="nav-item">
+          <a class="u u-LR" href="#system">System</a>
+        </div>
+        <div class="nav-item">
+          <a class="u u-LR" href="#how-it-works">How it Works</a>
+        </div>
+        <div class="nav-item">
+          <a class="u u-LR" href="#budget">Budget</a>
+        </div>
+        <div class="nav-item">
+          <a class="u u-LR" href="#team">Team</a>
+        </div>
+        <div class="nav-item">
+          <a class="u u-LR" href="#evaluation">Evaluation</a>
+        </div>
+        <div class="nav-item">
+          <a class="u u-LR" href="#comments">Comments</a>
+        </div>
+        <div class="nav-item">
+          <button class="outline btn-info" onclick="location.href='user-guide.html'">User Guide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="home">
+    <div id="branding">
+      <img src="assets/img/long-logo-blue-2.png" alt="DeliverED Logo" id="home-logo">
+      <h1 id="home-text">Home</h1>
+      <p id="home-subtext">A Smart Mailbox For All Your Home Delivery Needs.</p>
+    </div>
+  </div>
+
+  <!-- Right now each section is 100vh but I'm unsure whether we will be able to fit all the content like this, so will probs just be height auto -->
+  <!-- The card style actually looks quite nice so maybe we could use that for the actualy content too -->
+  <div class="section hero fullscreen" id="system">
     <div class="hero-body">
       <div class="content">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <img src="assets/img/long-logo-grey-2.png" id="landing-logo"/>
-          </div>
-          <div class="col-3"></div>
-        </div>
         <div class="card">
           <div class="placeholder">
             <div class="placeholder-icon">
@@ -61,23 +80,17 @@
             </div>
             <h2 class="page-head">System</h2>
             <h5 class="placeholder-title">Section under construction!</h5>
-            <div class="dummy">This section will contain a summary of the overall concept for our project, all functionalities of our device, our market research including an analysis of the market relevance of our product, and any future developments to be considered.</div>
+            <div class="dummy">This section will contain a summary of the overall concept for our project, all functionalities of our device, our market research including an analysis of the market relevance of our product, and any future
+              developments to be considered.</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-    
-  <div class="hero fullscreen" id="how-it-works">
+
+  <div class="section hero fullscreen" id="how-it-works">
     <div class="hero-body">
       <div class="content">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <img src="assets/img/long-logo-grey-2.png" id="landing-logo"/>
-          </div>
-          <div class="col-3"></div>
-        </div>
         <div class="card">
           <div class="placeholder">
             <div class="placeholder-icon">
@@ -87,23 +100,17 @@
             </div>
             <h2 class="page-head">How It Works</h2>
             <h5 class="placeholder-title">Section under construction!</h5>
-            <div class="dummy">This section will contain a state diagram, user sequence diagrams for primary uses, the App framework, a Webots demonstration of hardware, a demonstration of app-device connectivity, and any comments on storing data if that is the route we go.</div>
+            <div class="dummy">This section will contain a state diagram, user sequence diagrams for primary uses, the App framework, a Webots demonstration of hardware, a demonstration of app-device connectivity, and any comments on storing data if
+              that is the route we go.</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-         
-  <div class="hero fullscreen" id="budget">
+
+  <div class="section hero fullscreen" id="budget">
     <div class="hero-body">
       <div class="content">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <img src="assets/img/long-logo-grey-2.png" id="landing-logo"/>
-          </div>
-          <div class="col-3"></div>
-        </div>
         <div class="card">
           <div class="placeholder">
             <div class="placeholder-icon">
@@ -119,17 +126,10 @@
       </div>
     </div>
   </div>
-    
-  <div class="hero fullscreen" id="team">
+
+  <div class="section hero fullscreen" id="team">
     <div class="hero-body">
       <div class="content">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <img src="assets/img/long-logo-grey-2.png" id="landing-logo"/>
-          </div>
-          <div class="col-3"></div>
-        </div>
         <div class="card">
           <div class="placeholder">
             <div class="placeholder-icon">
@@ -145,17 +145,10 @@
       </div>
     </div>
   </div>
-    
-  <div class="hero fullscreen" id="evaluation">
+
+  <div class="section hero fullscreen" id="evaluation">
     <div class="hero-body">
       <div class="content">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <img src="assets/img/long-logo-grey-2.png" id="landing-logo"/>
-          </div>
-          <div class="col-3"></div>
-        </div>
         <div class="card">
           <div class="placeholder">
             <div class="placeholder-icon">
@@ -171,17 +164,10 @@
       </div>
     </div>
   </div>
-  
-   <div class="hero fullscreen" id="comments">
+
+  <div class="section hero fullscreen" id="comments">
     <div class="hero-body">
       <div class="content">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <img src="assets/img/long-logo-grey-2.png" id="landing-logo"/>
-          </div>
-          <div class="col-3"></div>
-        </div>
         <div class="card">
           <div class="placeholder">
             <div class="placeholder-icon">
@@ -196,34 +182,9 @@
         </div>
       </div>
     </div>
-  </div>   
-    
-   <div class="hero fullscreen" id="user-guide">
-    <div class="hero-body">
-      <div class="content">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <img src="assets/img/long-logo-grey-2.png" id="landing-logo"/>
-          </div>
-          <div class="col-3"></div>
-        </div>
-        <div class="card">
-          <div class="placeholder">
-            <div class="placeholder-icon">
-              <span class="icon">
-                <i class="fa fa-wrapper fa-coffee x-large"></i>
-              </span>
-            </div>
-            <h2 class="page-head">User Guide</h2>
-            <h5 class="placeholder-title">Section under construction!</h5>
-            <div class="dummy">There will be a User Guide here - this is yet to be discussed / planned.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>  
+  </div>
 
+  <script type="text/javascript" src="assets/js/scroll.js"></script>
 </body>
 
 </html>
