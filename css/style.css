@@ -84,6 +84,12 @@ button {
   text-transform: capitalize !important;
 }
 
+footer {
+  background-color: rgb(3, 7, 16, 0.8) !important;
+  backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .clearfix {
   zoom: 1;
 }
@@ -149,9 +155,11 @@ img#nav-logo {
 
 .nav-w-bg {
   padding: 12px 12px;
-  background: rgba(249, 249, 249, 0.99);
+  background: rgba(249, 249, 249, 0.95);
   border-radius: 10px;
   box-shadow: 0 3px 27px rgba(27, 10, 27, 0.2);
+  backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 div#dropdown {
@@ -359,19 +367,23 @@ p#home-subtext {
     height: auto !important;
   }
 
+  .header .header-nav .nav-item {
+    padding: 0 !important;
+  }
+
   .header-menu-s {
-    top: -7.7vh !important;
-    right: 0 !important;
+    top: -6.5vh !important;
+    right: 1rem !important;
   }
 
   #return2 {
-    top: -7.5vh !important;
-    right: 0 !important;
+    top: -6.5vh !important;
+    right: 1rem !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .header .nav-item a {
-    /* padding: .5rem 1rem; */
+  .header .nav-item a#dropdown-btn {
+    padding: 0 !important;
   }
 }
