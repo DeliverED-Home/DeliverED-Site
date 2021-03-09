@@ -372,12 +372,12 @@ p#home-subtext {
   }
 
   .header-menu-s {
-    top: -6.5vh !important;
+    top: -6.1vh !important;
     right: 1rem !important;
   }
 
   #return2 {
-    top: -6.5vh !important;
+    top: -6vh !important;
     right: 1rem !important;
   }
 }
