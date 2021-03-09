@@ -44,10 +44,9 @@ a:focus {
   padding: 0 !important;
 }
 
-/* .card {
-  margin-bottom: 0 !important;
-  width: 100%;
-} */
+.u-center {
+  margin-left: -2vw !important;
+}
 /*---------------------------------------------------------------*/
 /* UNIVERSAL STYLES */
 /*---------------------------------------------------------------*/
@@ -120,6 +119,11 @@ img#blue-blob {
 
 .card-content {
   margin: 0.6rem 1.1rem;
+}
+
+.social-link {
+  font-size: 25px !important;
+  margin-right: 10px;
 }
 
 /*---------------------------------------------------------------*/
