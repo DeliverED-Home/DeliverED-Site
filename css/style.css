@@ -137,7 +137,7 @@ img#blue-blob {
 }
 
 .header-menu-s {
-  position: fixed;
+  position: absolute;
 }
 
 
@@ -203,13 +203,9 @@ img#home-img {
   padding-top: 10vh;
   position: absolute;
   -webkit-animation: fadein 2s;
-  /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s;
-  /* Firefox < 16 */
   -ms-animation: fadein 2s;
-  /* Internet Explorer */
   -o-animation: fadein 2s;
-  /* Opera < 12.1 */
   animation: fadein 2s;
 }
 
@@ -344,9 +340,7 @@ p#home-subtext {
 }
 
 @media screen and (max-width: 768px) {
-  .header .header-nav .nav-item {
-    padding: 1rem 2rem;
-  }
+
 
   .header .header-nav {
     -webkit-box-flex: 1;
@@ -368,7 +362,7 @@ p#home-subtext {
   }
 
   .header-menu-s {
-    right: 1rem !important;
-    top: 1rem !important;
+    top: -7.5vh !important;
+    right: 0 !important;
   }
 }
