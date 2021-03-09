@@ -52,6 +52,10 @@ a:focus {
   margin: 1.2rem 0 !important;
 }
 
+.card {
+  margin-bottom: 0 !important;
+}
+
 /*---------------------------------------------------------------*/
 /* UNIVERSAL STYLES */
 /*---------------------------------------------------------------*/
@@ -155,16 +159,17 @@ div#dropdown {
   position: fixed !important;
   z-index: 99;
   align-items: baseline;
-  display: flex;
   min-height: 0 !important;
 }
 
 div#dropdown>.section-content {
   text-align: center;
-  padding: 20px 0;
   background: rgba(249, 249, 249, 0.99);
   border-radius: 10px;
   box-shadow: 0 3px 27px rgba(27, 10, 27, 0.2);
+}
+div#dropdown>.section-content>.card-content{
+  margin-top: 20px;
 }
 
 /*---------------------------------------------------------------*/
