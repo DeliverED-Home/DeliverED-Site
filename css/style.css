@@ -140,7 +140,6 @@ img#blue-blob {
   position: absolute;
 }
 
-
 /*---------------------------------------------------------------*/
 /* NAV BAR */
 /*---------------------------------------------------------------*/
@@ -168,7 +167,8 @@ div#dropdown>.section-content {
   border-radius: 10px;
   box-shadow: 0 3px 27px rgba(27, 10, 27, 0.2);
 }
-div#dropdown>.section-content>.card-content{
+
+div#dropdown>.section-content>.card-content {
   margin-top: 20px;
 }
 
@@ -359,8 +359,19 @@ p#home-subtext {
     height: auto !important;
   }
 
-  .header-menu-s, #return2  {
+  .header-menu-s {
+    top: -7.7vh !important;
+    right: 0 !important;
+  }
+
+  #return2 {
     top: -7.5vh !important;
     right: 0 !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header .nav-item a {
+    /* padding: .5rem 1rem; */
   }
 }
