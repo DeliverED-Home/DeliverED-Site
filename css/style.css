@@ -282,8 +282,8 @@ p#home-subtext {
 
 @media only screen and (max-width: 836px) {
   .header-clear-mod {
-    margin: 1rem;
-    width: calc(100vw - 2rem);
+    margin: 1rem !important;
+    width: calc(100vw - 2rem) !important;
   }
   .section {
     padding: 130px 1rem 15px 1rem !important;
