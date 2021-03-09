@@ -47,6 +47,7 @@ a:focus {
 .u-center {
   margin-left: -2vw !important;
 }
+
 /*---------------------------------------------------------------*/
 /* UNIVERSAL STYLES */
 /*---------------------------------------------------------------*/
@@ -59,7 +60,8 @@ body {
   background: #e7eefa;
   background: -webkit-linear-gradient(to bottom, #f7f7f7, #e7eefa);
   background: linear-gradient(135deg, #f7f7f7, #e7eefa) no-repeat fixed;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 a {
@@ -280,12 +282,47 @@ p#home-subtext {
   display: none;
 }
 
+.header-menu-s {
+  position: fixed;
+  right: 1rem;
+  top: 2rem;
+}
+
 @media only screen and (max-width: 836px) {
   .header-clear-mod {
     margin: 1rem !important;
     width: calc(100vw - 2rem) !important;
   }
+
   .section {
     padding: 130px 1rem 15px 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 836px) {
+  .header-menu-s {
+    position: fixed;
+    right: 5rem;
+    top: 3.1rem;
+  }
+}
+
+@media only screen and (max-width: 1206px) {
+  .header-menu-lg {
+    display: none;
+  }
+
+  .header-menu-s {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 1206px) {
+  .header-menu-lg {
+    display: inline-block;
+  }
+
+  .header-menu-s {
+    display: none;
   }
 }
