@@ -258,7 +258,7 @@ h1#home-text-s {
   font-family: 'Noto Sans', sans-serif;
   color: #6680c1;
   margin-left: -.25vw;
-  font-size: 4rem;
+  font-size: 15vw;
 }
 
 p#home-subtext-s {
@@ -266,7 +266,7 @@ p#home-subtext-s {
   margin: -2vh 0 0 0.5vw;
   font-family: 'Arapey', serif;
   font-style: oblique;
-  font-size: 1.2rem
+  font-size: 4vw;
 }
 
 .top-logo {
