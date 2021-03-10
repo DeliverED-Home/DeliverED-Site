@@ -201,9 +201,21 @@ div#branding-container {
   height: 100%;
 }
 
+div#branding-container-s {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 div#branding {
   bottom: 6vh;
   position: absolute;
+}
+
+div#branding-s {
+  top: 25vh;
+  position: absolute;
+  text-align: center;
 }
 
 img#home-img {
@@ -238,6 +250,21 @@ p#home-subtext {
   font-family: 'Arapey', serif;
   font-style: oblique;
   letter-spacing: -1px;
+}
+
+h1#home-text-s {
+  font-family: 'Noto Sans', sans-serif;
+  color: #6680c1;
+  margin-left: -.25vw;
+  font-size: 4rem;
+}
+
+p#home-subtext-s {
+  color: #374054;
+  margin: -2vh 0 0 0.5vw;
+  font-family: 'Arapey', serif;
+  font-style: oblique;
+  font-size: 1.2rem
 }
 
 .top-logo {
