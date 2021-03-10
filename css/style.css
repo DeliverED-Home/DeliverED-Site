@@ -222,7 +222,7 @@ div#branding-s {
 
 img#home-img {
   transform: scale(1.15);
-  padding-top: 10vh;
+  top: 7vw;
   position: absolute;
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
