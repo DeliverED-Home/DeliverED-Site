@@ -7,5 +7,6 @@ $(window).ready(function(){
 	});
   $('div#dropdown>div>div>a').on('click', function() {
 		$('div#dropdown').slideToggle(400);
+    $('a#dropdown-btn>i').toggleClass('fa-chevron-up');
 	});
 })
