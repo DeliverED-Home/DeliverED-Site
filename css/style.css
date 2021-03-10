@@ -171,9 +171,11 @@ div#dropdown {
 
 div#dropdown>.section-content {
   text-align: center;
-  background: rgba(249, 249, 249, 0.99);
+  background: rgba(249, 249, 249, 0.95);
   border-radius: 10px;
   box-shadow: 0 3px 27px rgba(27, 10, 27, 0.2);
+  backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 div#dropdown>.section-content>.card-content {
