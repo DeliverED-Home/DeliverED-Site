@@ -18,6 +18,6 @@ window.onload = function() {
     var scrollPercent = scrollTop / scrollArea || 0;
 
     img.style.top = 7 + (-0.5 * Math.sqrt(scrollPercent * window.scrollY)) * 0.5 + 'vw';
-    img.style.right = (-0.5 * Math.sqrt(scrollPercent * window.scrollY)) * 0.5 + 'vw';
+    img.style.right = 2.2 + (-0.5 * Math.sqrt(scrollPercent * window.scrollY)) * 0.5 + 'vw';
   });
 }
