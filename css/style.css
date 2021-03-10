@@ -35,7 +35,7 @@ a:focus {
   --btn-border-color: none;
 }
 
-[class*=' btn-']:not(.btn-container):not(.btn-close):hover, [class^=btn-]:not(.btn-container):not(.btn-close):hover {
+[class*=' btn-info']:not(.btn-container):not(.btn-close):hover, [class^=btn-info]:not(.btn-container):not(.btn-close):hover {
   background-color: #4bb13e;
   transition: all var(--animation-duration);
 }
@@ -78,6 +78,10 @@ body {
   background: linear-gradient(135deg, #f7f7f7, #e7eefa) no-repeat fixed;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+h4, h5, h6, p {
+  font-family: 'Quicksand', sans-serif;
 }
 
 a {
