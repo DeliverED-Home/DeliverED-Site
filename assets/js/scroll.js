@@ -19,9 +19,16 @@ window.onload = function() {
   });
 
   var counter = 0;
+  var counter2 = 0;
   document.getElementById('sys-nav').onclick = function () {
     if (counter == 0) {
       document.getElementById('ad-vid').play();
+      counter++;
+    }
+  };
+  document.getElementById('sys-nav-2').onclick = function () {
+    if (counter2 == 0) {
+      document.getElementById('ad-vid-s').play();
       counter++;
     }
   };
