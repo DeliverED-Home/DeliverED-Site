@@ -4,6 +4,8 @@ window.onload = function() {
   var scrollArea = 1000 - windowHeight;
   var img = document.getElementById('home-img');
 
+  $("video").prop("volume", 0.03);
+
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
       $('.header').addClass('nav-w-bg');
