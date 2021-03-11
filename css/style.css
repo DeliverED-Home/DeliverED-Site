@@ -102,6 +102,11 @@ footer {
     -webkit-backdrop-filter: blur(10px);
 }
 
+video {
+  border-radius: 10px;
+  box-shadow: 0 3px 27px rgba(27, 10, 27, 0.05);
+}
+
 .clearfix {
   zoom: 1;
 }

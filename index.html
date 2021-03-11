@@ -9,13 +9,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-  <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -39,7 +41,7 @@
         </div>
         <!-- large screen -->
         <div class="header-menu-lg nav-item">
-          <a class="u u-LR" href="#system">System</a>
+          <a class="u u-LR" href="#system" id="sys-nav">System</a>
         </div>
         <div class="header-menu-lg nav-item">
           <a class="u u-LR" href="#how-it-works">How it Works</a>
@@ -67,7 +69,7 @@
   <div class="section" id="dropdown">
     <div class="section-content card">
       <div class="card-content">
-        <a class="u u-C" href="#system">System</a>
+        <a class="u u-C" href="#system" id="sys-nav">System</a>
         <br><br>
         <a class="u u-C" href="#how-it-works">How it Works</a>
         <br><br>
@@ -115,18 +117,52 @@
       <div class="card-head">
         <h3 class="page-head"><span class="icon icon-title"><i class="fa fa-wrapper fa-cogs"></i></span>System</h3>
       </div>
-      <div class="space"></div><div class="space"></div>
+      <div class="space"></div>
+      <div class="space"></div>
       <div class="card-content">
         <div class="card-para">
           <h4>What is DeliverED?</h4>
-          <p>DeliverEd Home is a smart mailbox built to make home deliveries as easy as the push of a button. Our device handles all your home deliveries, securely holding them right outside your door until you’re ready to collect. No more staying at home waiting, no more communal lockers – this mailbox is designed with homeowners in mind. </p>
+          <p>DeliverEd Home is a smart mailbox built to make home deliveries as easy as the push of a button. Our device handles all your home deliveries, securely holding them right outside your door until you’re ready to collect. No more staying at
+            home waiting, no more communal lockers – this mailbox is designed with homeowners in mind. </p>
         </div>
-        <div class="row  u-none-xs u-none-sm-only">
-          <div class="col-8 offset-2">
+        <div class="space"></div>
+
+        <div class="u-none-xs u-none-sm-only">
+          <div class="row">
+            <div class="col-8 offset-2">
+              <video id="ad-vid" controls poster="assets/img/poster.png">
+                <source src="assets/vid/ad.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="space"></div>
+          <div class="row">
+            <div class="col-3 offset-2">
+              <div class="divider"></div>
+            </div>
+            <div class="col-2" style="text-align: center; color: rgba(173,181,189);">
+              <h6>Features</h6>
+            </div>
+            <div class="col-3">
+              <div class="divider"></div>
+            </div>
+          </div>
+        </div>
+        <video id="ad-vid" class="u-none-sm" controls poster="assets/img/poster.png">
+          <source src="assets/vid/ad.mp4" type="video/mp4"/>
+        </video>
+        <div class="space u-none-sm"></div>
+        <div class="row u-none-sm">
+          <div class="col-sm-5">
+            <div class="divider"></div>
+          </div>
+          <div class="col-sm-2" style="text-align: center; color: rgba(173,181,189);">
+            <h6>Features</h6>
+          </div>
+          <div class="col-sm-5">
             <div class="divider"></div>
           </div>
         </div>
-        <div class="divider u-none-sm"></div>
         <div class="space"></div>
         <div class="row">
           <div class="col-3">
@@ -588,7 +624,7 @@
       <div class="row">
         <div class="col-4">
           <ul class="no-bullets">
-            <a href="#system">
+            <a href="#system" id="sys-nav">
               <li class="footer__list-item">System</li>
             </a>
             <a href="#how-it-works">
@@ -647,13 +683,20 @@
       </div>
       <div class="modal-body">
         <h4>Header</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       <div class="modal-footer u-text-right"><a class="u-inline-block close-btn" href="#footer"><button class="btn-small">Close</button></a></div>
     </div>
@@ -661,6 +704,7 @@
 
   <script type=" text/javascript" src="assets/js/scroll.js"></script>
   <script type="text/javascript" src="assets/js/dropdownNav.js"></script>
+  <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
 </body>
 
 </html>
