@@ -60,9 +60,9 @@ a:focus {
   margin-bottom: 0 !important;
 }
 
-/* .modal .modal-content .modal-body::-webkit-scrollbar {
-  display: block;
-} */
+.subtitle {
+  color: #c2ccd6 !important;
+}
 
 /*---------------------------------------------------------------*/
 /* UNIVERSAL STYLES */
