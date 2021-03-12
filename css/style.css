@@ -167,6 +167,10 @@ img#blue-blob {
   margin-right: 10px;
 }
 
+.social-link:hover>.subtitle {
+  color: #6d9ac7 !important;
+}
+
 .header-menu-s, #return2 {
   position: absolute;
 }
