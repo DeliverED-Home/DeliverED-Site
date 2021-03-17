@@ -9,19 +9,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-
+  <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
-
-  <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/3883f392c5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -41,7 +37,7 @@
         </div>
         <!-- large screen -->
         <div class="header-menu-lg nav-item">
-          <a class="u u-LR" href="#system" id="sys-nav">System</a>
+          <a class="u u-LR" href="#system">System</a>
         </div>
         <div class="header-menu-lg nav-item">
           <a class="u u-LR" href="#how-it-works">How it Works</a>
@@ -69,7 +65,7 @@
   <div class="section" id="dropdown">
     <div class="section-content card">
       <div class="card-content">
-        <a class="u u-C" href="#system" id="sys-nav-2">System</a>
+        <a class="u u-C" href="#system">System</a>
         <br><br>
         <a class="u u-C" href="#how-it-works">How it Works</a>
         <br><br>
@@ -117,111 +113,26 @@
       <div class="card-head">
         <h3 class="page-head"><span class="icon icon-title"><i class="fa fa-wrapper fa-cogs"></i></span>System</h3>
       </div>
-      <div class="space"></div>
-      <div class="space"></div>
       <div class="card-content">
-        <div class="card-para">
-          <h4>What is DeliverED?</h4>
-          <p>DeliverEd Home is a smart mailbox built to make home deliveries as easy as the push of a button. Our device handles all your home deliveries, securely holding them right outside your door until you’re ready to collect. No more staying at
-            home waiting, no more communal lockers – this mailbox is designed with homeowners in mind. </p>
-        </div>
-        <div class="space"></div>
-
-        <div class="u-none-xs u-none-sm-only">
-          <div class="row">
-            <div class="col-8 offset-2">
-              <video id="ad-vid" controls poster="assets/img/poster.png">
-                <source src="assets/vid/ad.mp4" type="video/mp4"/>
-              </video>
-            </div>
-          </div>
-          <div class="space"></div>
-          <div class="row">
-            <div class="col-4 offset-1">
-              <div class="divider"></div>
-            </div>
-            <div class="col-2">
-              <h6 class="divider-title">Features</h6>
-            </div>
-            <div class="col-4">
-              <div class="divider"></div>
-            </div>
-          </div>
-        </div>
-        <video id="ad-vid-s" class="u-none-sm" controls poster="assets/img/poster.png">
-          <source src="assets/vid/ad.mp4" type="video/mp4"/>
-        </video>
-        <div class="space u-none-sm"></div>
-        <div class="row u-none-sm">
-          <div class="col-xs-5">
-            <div class="divider"></div>
-          </div>
-          <div class="col-xs-2">
-            <h6 class="divider-title">Features</h6>
-          </div>
-          <div class="col-xs-5">
-            <div class="divider"></div>
-          </div>
-        </div>
-        <div class="space"></div>
-        <div class="row">
-          <div class="col-4">
-            <div class="placeholder h-100 u-flex u-flex-column">
-              <div class="placeholder-icon animated pulse"><span class="icon"><i class="fa fa-wrapper fa-truck-loading xx-large"></i></span></div>
-              <h6 class="placeholder-title">Simple Drop-offs</h6>
-              <div class="placeholder-subtitle">We know that couriers are on a tight schedule, and don’t want to deal with complex mailboxes in the middle of a shift.
-                DeliverEd Home allows couriers to drop off parcels with the push of a button, while keeping the rest of your parcels safe and unreachable, just in case.</div>
-            </div>
-          </div>
-
-          <div class="col-4">
-            <div class="placeholder h-100 u-flex u-flex-column">
-              <div class="placeholder-icon animated pulse"><span class="icon"><i class="fa fa-wrapper fa-clock xx-large"></i></span></div>
-              <h6 class="placeholder-title">Real-Time Notifications</h6>
-              <div class="placeholder-subtitle">Get real-time alerts with our DeliverEd app. Know when a parcel has arrived, when your device is low on charge, and when
-                your mailbox is full. Our app also provides multiple security alerts, so you can rest easy knowing your parcels will be safe when you return home.</div>
-            </div>
-          </div>
-
-          <div class="col-4">
-            <div class="placeholder h-100 u-flex u-flex-column">
-              <div class="placeholder-icon animated pulse"><span class="icon"><i class="fa fa-wrapper fa-lock xx-large"></i></span></div>
-              <h6 class="placeholder-title">Secure Compartment</h6>
-              <div class="placeholder-subtitle">Once a parcel has been dropped into the mailbox, it is transferred into a separate secure compartment, only accessible via
-                our DeliverEd app. Parcel security is extremely important to us, and so is your trust in us.</div>
-            </div>
-          </div>
-
-
-        </div>
-
-        <div class="row">
-          <div class="col-4">
-            <div class="placeholder h-100 u-flex u-flex-column">
-              <div class="placeholder-icon animated pulse"><span class="icon"><i class="fa fa-wrapper fa-hand-sparkles xx-large"></i></span></div>
-              <h6 class="placeholder-title">UV Sanitation</h6>
-              <div class="placeholder-subtitle">Even without COVID-19, there are hundreds of bugs and diseases that could be picked up by your parcels during delivery. DeliverEd Home comes with safe built-in UV sanitation, so you don’t have to worry about bringing germs into your home.</div>
-            </div>
-          </div>
-
-          <div class="col-4">
-            <div class="placeholder h-100 u-flex u-flex-column">
-              <div class="placeholder-icon animated pulse"><span class="icon"><i class="fa fa-wrapper fa-battery-full xx-large"></i></span></div>
-              <h6 class="placeholder-title">Long Battery Life</h6>
-              <div class="placeholder-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore architecto corrupti temporibus minus quasi eum quaerat dignissimos? Doloremque et quae amet pariatur porro iure reiciendis consequatur.
-                Nulla repudiandae delectus tenetur?</div>
-            </div>
-          </div>
-
-          <div class="col-4">
-            <div class="placeholder h-100 u-flex u-flex-column">
-              <div class="placeholder-icon animated pulse"><span class="icon"><i class="fa fa-wrapper fa-cloud-sun-rain xx-large"></i></span></div>
-              <h6 class="placeholder-title">Tamper Proof</h6>
-              <div class="placeholder-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur officiis quod ipsa accusamus explicabo delectus dolores molestiae consequuntur dolore aut iure quos quis, ipsam illo aliquid
-                molestias, iusto nulla rerum!</div>
-            </div>
-          </div>
-        </div>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
       </div>
     </div>
   </div>
@@ -279,7 +190,7 @@
             <!-- Hallelujah -->
             <div class="tile m-0 level">
               <div class="tile__icon">
-                <figure class="avatar avatar--xlarge" data-text="Hk" style="background: rgb(12, 74, 119);rgb(96, 129, 212)"></figure>
+                <figure class="avatar avatar--xlarge" data-text="Hk" style="background: rgb(12, 74, 119);"></figure>
               </div>
               <div class="tile__container">
                 <p class="tile__title m-0">Hallelujah Kebede</p>
@@ -605,19 +516,18 @@
     </div>
   </div>
 
-  <footer class="footer" id="footer">
+  <footer class="footer u-none-xs u-none-sm-only">
     <div class="row">
-      <div class="col-4 offset-4 u-none-xs u-none-sm-only" style="padding-left: 30px;">
+      <div class="col-4 offset-4" style="padding-left: 30px;">
         <img src="assets/img/long-logo-white-2.png">
       </div>
     </div>
-    <img class="u-none-sm" src="assets/img/small-logo-white-final-sq.png" height="100px" width="100px">
     <div class="content">
       <div class="divider"></div>
       <div class="row">
         <div class="col-4">
           <ul class="no-bullets">
-            <a href="#system" id="sys-nav">
+            <a href="#system">
               <li class="footer__list-item">System</li>
             </a>
             <a href="#how-it-works">
@@ -656,7 +566,7 @@
             <a href="https://github.com/DeliverED-Home">
               <li class="footer__list-item">GitHub Organisation</li>
             </a>
-            <a href="#privacy-notice">
+            <a href="!#">
               <li class="footer__list-item">Privacy Notice</li>
             </a>
             <ul>
@@ -668,36 +578,8 @@
     <p class="subtitle">&copy; 2021 DeliverED (Group 19) </p>
   </footer>
 
-  <div class="modal" id="privacy-notice">
-    <a href="#footer" class="modal-overlay close-btn" aria-label="Close"></a>
-    <div class="modal-content" role="document">
-      <div class="modal-header">
-        <div class="modal-title">Privacy Notice</div>
-      </div>
-      <div class="modal-body">
-        <h4>Header</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="modal-footer u-text-right"><a class="u-inline-block close-btn" href="#footer"><button class="btn-small">Close</button></a></div>
-    </div>
-  </div>
-
-  <script type=" text/javascript" src="assets/js/scroll.js"></script>
+  <script type="text/javascript" src="assets/js/scroll.js"></script>
   <script type="text/javascript" src="assets/js/dropdownNav.js"></script>
-  <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
 </body>
 
 </html>
