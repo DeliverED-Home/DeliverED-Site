@@ -334,6 +334,11 @@ p#home-subtext-s {
   text-align: center;
 }
 
+a#cirrus-link {
+  color: #ce919f !important;
+  text-decoration: underline;
+}
+
 /*---------------------------------------------------------------*/
 /* KEYFRAMES, WEBKIT ETC. */
 /*---------------------------------------------------------------*/
