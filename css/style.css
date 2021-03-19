@@ -339,10 +339,6 @@ a#cirrus-link {
   text-decoration: underline;
 }
 
-.centre-teams {
-  margin-left: 13vw;
-}
-
 /*---------------------------------------------------------------*/
 /* KEYFRAMES, WEBKIT ETC. */
 /*---------------------------------------------------------------*/
@@ -468,11 +464,19 @@ a#cirrus-link {
     top: -6vh !important;
     right: 1rem !important;
   }
+
+  .centre-teams {
+    margin-left: 5vw !important;
+  }
 }
 
 @media screen and (min-width: 769px) {
   .header .nav-item a#dropdown-btn {
     padding: 0 !important;
+  }
+
+  .centre-teams {
+    margin-left: 13vw;
   }
 }
 
