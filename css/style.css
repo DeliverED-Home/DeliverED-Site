@@ -5,9 +5,17 @@
   padding: 4rem !important;
 }
 
-/* .placeholder {
-  box-shadow: 0 3px 27px rgba(27, 10, 27, 0.01);
-} */
+.row [class*=' col-'], .row [class^=col-] {
+  padding: 0.5rem !important;
+}
+
+ul.s {
+  font-size: 0.9rem;
+}
+
+ul.xs {
+  font-size: 0.7rem;
+}
 
 .header-clear-mod {
   background-color: transparent;
@@ -99,7 +107,7 @@ button {
 footer {
   background-color: rgb(3, 7, 16, 0.8) !important;
   backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 video {
@@ -112,7 +120,7 @@ video {
   margin-top: 0.5rem;
   text-align: center;
   margin-left: -5px;
-  color: rgba(173,181,189);
+  color: rgba(173, 181, 189);
 }
 
 .clearfix {
@@ -193,7 +201,7 @@ img#nav-logo {
   border-radius: 10px;
   box-shadow: 0 3px 27px rgba(27, 10, 27, 0.2);
   backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 div#dropdown {
@@ -209,7 +217,7 @@ div#dropdown>.section-content {
   border-radius: 10px;
   box-shadow: 0 3px 27px rgba(27, 10, 27, 0.2);
   backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 div#dropdown>.section-content>.card-content {
@@ -322,7 +330,6 @@ p#home-subtext-s {
 /*---------------------------------------------------------------*/
 /* SECTIONS */
 /*---------------------------------------------------------------*/
-
 .card-para {
   text-align: center;
 }
