@@ -115,6 +115,10 @@ video {
   box-shadow: 0 3px 27px rgba(27, 10, 27, 0.05);
 }
 
+code {
+  font-size: 1.1rem;
+}
+
 .divider-title {
   margin-bottom: 0 !important;
   margin-top: 0.5rem;
@@ -343,9 +347,10 @@ a#cirrus-link {
   background-color: #fefefe;
 }
 
-/* #contents-title {
-  margin: 0.6rem 0;
-} */
+a.contact {
+  color: rgb(135, 17, 17);
+  text-decoration: underline;
+}
 /*---------------------------------------------------------------*/
 /* KEYFRAMES, WEBKIT ETC. */
 /*---------------------------------------------------------------*/
@@ -476,10 +481,6 @@ a#cirrus-link {
 @media screen and (min-width: 769px) {
   .header .nav-item a#dropdown-btn {
     padding: 0 !important;
-  }
-
-  .centre-teams {
-    margin-left: 13vw;
   }
 }
 
