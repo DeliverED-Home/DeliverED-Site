@@ -92,12 +92,12 @@ h4, h5, h6, p {
   font-family: 'Quicksand', sans-serif;
 }
 
-a {
+a.blue-link {
   font-size: 1.1em !important;
   color: #6680c1 !important;
 }
 
-button {
+button.header-btn {
   font-size: 1.1em;
   font-family: 'Noto Sans', sans-serif !important;
   font-weight: 600;
@@ -339,6 +339,13 @@ a#cirrus-link {
   text-decoration: underline;
 }
 
+#contents {
+  background-color: #fefefe;
+}
+
+/* #contents-title {
+  margin: 0.6rem 0;
+} */
 /*---------------------------------------------------------------*/
 /* KEYFRAMES, WEBKIT ETC. */
 /*---------------------------------------------------------------*/
@@ -463,10 +470,6 @@ a#cirrus-link {
   #return2 {
     top: -6vh !important;
     right: 1rem !important;
-  }
-
-  .centre-teams {
-    margin-left: 5vw !important;
   }
 }
 
