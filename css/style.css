@@ -192,6 +192,10 @@ img#blue-blob {
   margin-left: -10px;
 }
 
+.logo {
+  height: 100px;
+}
+
 /*---------------------------------------------------------------*/
 /* NAV BAR */
 /*---------------------------------------------------------------*/
@@ -484,12 +488,11 @@ a.contact {
   }
 }
 
-.placeholder:hover {
-  background-color: rgb(59, 67, 84);
+.col-3>.card, .col-4>.card , .col-6>.card {
+  box-shadow: 0 8px 20px 0 rgb(42 51 83 / 6%), 0 5px 5px rgb(0 0 0 / 4%)
 }
 
 .placeholder:hover>* {
-  color: #fff;
   transform: scale(1.045);
   transition: ease-in-out 0.2s;
   z-index: 99;
