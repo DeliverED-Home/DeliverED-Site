@@ -74,6 +74,10 @@
 
               <li class="menu-item">
                 <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-exclamation-triangle" aria-hidden="true"></i></span></div><a href="#item-3-1" class="ug-item">Troubleshooting</a>
+                <ul class="menu">
+                  <li class="menu-item"><a href="#item-3-1" class="ug-item">Hardware help</a></li>
+                  <li class="menu-item"><a href="#item-3-2" class="ug-item">Software help</a></li>
+                </ul>
               </li>
             </ul>
             <div class="btn-group" style="width:100%">
@@ -183,11 +187,85 @@
 
             <div class="space"></div>
             <h6>Functionality Overview</h6>
-            <div id="item-1-3"></div> <!-- anchor here to compensate for nav height -->
-
+            <div class="row">
+              <div class="col-9">
+                <p>Your DeliverED Home mailbox is made up of two sections – the delivery and secure sections. The delivery section is the top door of the device where packages can be placed inside to be delivered. This section can be locked by your
+                  app
+                  to prevent deliveries if you’re not expecting any. The secure section is where your packages are stored, accessed via the bottom door. This door is always locked, unless opened via the DeliverED app or emergency manual key. Inside
+                  you’ll find your packages neatly piled up on top of a lift mechanism that is used during the delivery process. How to perform actions using the app are detailed under the <a href="#item-2-3">Software Operation</a>.</p>
+                <div id="item-1-3"></div> <!-- anchor here to compensate for nav height -->
+              </div>
+              <div class="col-3">
+                <img src="assets/img/webots.png" class="rounded">
+              </div>
+            </div>
 
             <div class="space"></div>
             <h6>Functionality Breakdown</h6>
+            <div class="row">
+              <div class="col-3">
+                <figure class="fig">
+                  <img src="assets/img/photon.jpg" class="rounded">
+                  <figcaption class="fig-caption u-text-center">
+                    Figure 1: Particle Photon
+                  </figcaption>
+                </figure>
+                <figure class="fig">
+                  <img src="assets/img/trapdoor.png" class="rounded">
+                  <figcaption class="fig-caption u-text-center">
+                    Figure 5: Bascule Collapsible Door
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-3">
+                <figure class="fig">
+                  <img src="assets/img/lock.jpg" class="rounded">
+                  <figcaption class="fig-caption u-text-center">
+                    Figure 2: Solenoid Lock
+                  </figcaption>
+                </figure>
+                <figure class="fig">
+                  <img src="assets/img/psu.png" class="rounded">
+                  <figcaption class="fig-caption u-text-center">
+                    Figure 6: 8-Way AA Battery Supply
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-3">
+                <figure class="fig">
+                  <img src="assets/img/yale.jpg" class="rounded">
+                  <figcaption class="fig-caption u-text-center">
+                    Figure 3: Yale Key Lock
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-3">
+                <figure class="fig">
+                  <img src="assets/img/forklift.png" class="rounded">
+                  <figcaption class="fig-caption u-text-center">
+                    Figure 4: Forklift
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <strong>Particle Photon Microcontroller:</strong> (See Figure 1) The brains of the device, this tiny IoT device communicates with
+            the cloud to allow you to talk to your mailbox from the DeliverED app. It is fixed below the lift, and you will find many
+            internal wires connected to it. <br><br>
+            <strong>Collapsible Floor:</strong> (See Figure 5) The floor of the delivery section works as a trapdoor, consisting of some rotating shafts and a spring mechanism. When released, a package falls through to the secure section. <br><br>
+            <strong>Lift Mechanism:</strong> (See Figure 4) The moving platform is attached to the back of the device, where a Lego EV3
+            motor powers several shafts which rotate to move two tank-style tracks up and down. The platform is attached to these,
+            moving with them. <br><br>
+            <strong>Solenoid:</strong> (See Figure 2) There are two of these in the system, one for each door. They function as the locks on
+            the device, controlled electronically to either pull in or push out a small metal rod which controls the state of the doors. <br><br>
+            <strong>Infrared Sensor:</strong> (See Figure 4) These are used to detect when a package is in the way, allowing for internal calculations of when to stop the platform from rising any further. <br><br>
+            <strong>Yale key mechanism:</strong> (See Figure 3) This functions as the emergency manual unlock for the secure section. When the
+            correct key is inserted, the door is unlocked. This overrides any signal being given to the solenoid and is primarily used
+            if the system has run out of power. <br><br>
+            <strong>8-Way AA Power Supply:</strong> (See Figure 6) The is what powers the the Particle Photon and all the components of
+            the mailbox - the infrared sensors, the solenoid lock, the forklift and the collapsible door. <br><br>
+            <strong>Delivery button:</strong> This is visible on the outside of the device and is a simple button that when pressed sends a signal
+            to the Photon. This triggers a function within the device that begins the delivery sequence so long as it also detects that
+            the delivery door is locked.
             <div id="item-2-1"></div> <!-- anchor here to compensate for nav height -->
 
             <div class="space"></div>
@@ -222,86 +300,131 @@
             <div id="item-2-2"></div> <!-- anchor here to compensate for nav height -->
             <strong>Step 3: App Installation</strong>
             <br>
-            Now your device is ready to go, and all you need to do is download our DeliverED app to use it! Once you are signed into the app, you will need to use the claim code which you should have received alongside the device. For advice on
-            adding your device using the app, please see ‘Managing Your devices’ (Section \ref{sec:manage-devices}) under Software Operation.
             </p>
+            <div class="row">
+              <div class="col-10">
+                <p>Now your device is ready to go, and all you need to do is download our DeliverED app to use it! Once you are signed into the app, you will need to use the claim code which you should have received alongside the device. For advice
+                  on
+                  adding your device using the app, please see ‘Managing Your devices’ (Section \ref{sec:manage-devices}) under Software Operation.</p>
+              </div>
+              <div class="col-2">
+                <img class="ug-img rounded" src="assets/img/qr-code-app.png" alt="">
+              </div>
+            </div>
+
 
             <div class="space"></div>
             <h6>Hardware Operation</h6>
+            <p><strong>Deliver a package</strong>
+              <br>
+              When a mailperson arrives to deliver a package, the process is simple. First, they will open the upper door and place the
+              package inside the delivery section. Next, the door is then closed again and once done they may can press the ‘deliver’
+              button on the front of the device. This is all the input required to deliver a package, unless the mailbox is full or otherwise
+              locked. <br><br>
+              Internally, the delivery process is as follows:
+            </p>
+            <ol>
+              <li>Deliver button is pressed and delivery door locked.</li>
+              <li>Internal lift is raised to its maximum height, taking into account existing packages. This height is detected via an infrared sensor on the inside.</li>
+              <li>Trapdoor is unlocked, dropping the package a very short distance onto the lift platform.</li>
+              <li>Internal lift is lowered all the way down.</li>
+              <li>Trapdoor is closed, and the delivery door unlocked.</li>
+            </ol>
             <div id="item-2-3"></div> <!-- anchor here to compensate for nav height -->
-            <img class="ug-img" src="assets/img/door-opening-forever.gif">
-            <img class="ug-img" src="assets/img/floor-moving-forever.gif">
-            <img class="ug-img" src="assets/img/all-parts-forever.gif">
+            <div class="row u-center" style="padding-left: 120px;">
+              <div class="col-3">
+                <img class="ug-img" src="assets/img/door-opening-forever.gif">
+              </div>
+              <div class="col-3">
+                <img class="ug-img" src="assets/img/floor-moving-forever.gif">
+              </div>
+              <div class="col-3">
+                <img class="ug-img" src="assets/img/all-parts-forever.gif">
+              </div>
+            </div>
 
             <div class="space"></div>
             <h6>Software Operation</h6>
+            <p>
+              This section will cover how to use the companion Android application. Please refer to the Troubleshooting section if you
+              encounter any issues completing these tasks.
+            </p>
+            <div class="row">
+              <div class="col-10 offset-1">
+                <img src="assets/img/screens.png" alt="">
+              </div>
+            </div>
+
             <strong>Managing Your Account</strong>
-            <p><i><strong>Logging In</strong></i>
+            <p><i><strong>Logging In <span style="color:red">(See items 1 and 2)</span></strong></i>
               <br>
               Before you can control a device, you need to create an account with us! To do this, we ask you to log into our app using your Google account. Since you are using an Android phone, your phone should remember your login details! If you
               don’t want to use this account, you can choose to log in with a new existing Google account, or create a new one (if you have already made an account with us, just login using the same Google account).
-              <blockquote>
-                By logging in, you agree to our <a href="https://group19.sdp.inf.ed.ac.uk/assets/files/privacy-policy.pdf">Privacy Policy</a>
-              </blockquote>
-              Upon successfully logging in you will be brought to the Device Manager/Home Screen. This is where you can view all the devices (mailboxes) you have connected to your account. If you have just created your account, you
-              will see no devices here yet!
-              <br><br>
-              <i><strong>Logging Out / Switching Account</strong></i>
-              <br>
-              If you wish to log out of the app, or switch accounts, navigate to your Profileby tapping the avatar (right-most) icon on the navigation bar located at the bottom of your screen. Then tap ‘Log out’ and confirm your action! You will be
-              brought back to the login screen.
-              <br><br>
+            <blockquote>
+              By logging in, you agree to our <a href="https://group19.sdp.inf.ed.ac.uk/assets/files/privacy-policy.pdf">Privacy Policy</a>
+            </blockquote>
+            Upon successfully logging in you will be brought to the Device Manager/Home Screen. This is where you can view all the devices (mailboxes) you have connected to your account. If you have just created your account, you
+            will see no devices here yet!
+            <br><br>
+            <i><strong>Logging Out / Switching Account <span style="color:red">(See item 3)</span></strong></i>
+            <br>
+            If you wish to log out of the app, or switch accounts, navigate to your Profileby tapping the avatar (right-most) icon on the navigation bar located at the bottom of your screen. Then tap ‘Log out’ and confirm your action! You will be
+            brought back to the login screen.
+            <br><br>
             </p>
             <strong>Managing Your Devices</strong>
             <p>Navigate to the Home Screen by tapping the home (left-most) icon on the navigation bar located at the bottom of your screen.
               <br><br>
-              <i><strong>Adding A Delivered Home Mailbox</strong></i>
+              <i><strong>Adding A Delivered Home Mailbox <span style="color:red">(See items 4 and 5)</span></strong></i>
               <br>
-              To add a new mailbox, tap the ‘Add Device’ button.
-              <br>
-              Upon successfully logging in you will be brought to the Device Manager/Home Screen. This is where you can view all the devices (mailboxes) you have connected to your account. If you have just created your account, you
-              will see no devices here yet!
-              <br>
-              Important: If you are the owner of the DeliverED Home mailbox (i.e. the first person to add this mailbox to an account), please select that you are connecting to ‘Your new device’. If you are not the owner, please select that you are
-              connecting to ‘Someone’s existing device’.
+              To add a new mailbox, tap the ‘Add Device’ button and scan the QR code2
+              . This will grab the mailbox’s ID and autofill
+              the necessary information all for you! Alternatively, you can type in the ID yourself. Now that you have the device
+              credentials, you can save these options and operate your new mailbox!
               <br><br>
-              <i>You now have 2 options to add the mailbox’s credentials to your account!</i>
-            </p>
-            <ul>
-              <li>Scan the QR code. This will grab the mailbox's ID and autofill the necessary information all for you!</li>
-              <li>Manually enter the mailbox ID found under the QR code in the textbox!</li>
-            </ul>
-            <p>
-              Now that you have the device credentials, you can save these options and operate your new mailbox!
-              <br><br>
-              <i><strong>Removing A Delivered Home Mailbox</strong></i>
-              <blockquote style="color: red; background-color: rgb(247, 215, 220); border-left: 5px solid red;">Proceed with caution <i class="tile-icon icon fa fa-exclamation-circle"></i></blockquote>
-              Choose the mailbox you wish to proceed with and open the dropdown menu. Then, tap on ‘Full device information and settings’. From here, scroll if needed, tap the red ‘Remove Device’ button (accompanied with a <i class="tile-icon icon fa fa-exclamation-circle"></i>). To confirm that you really intended to remove this mailbox, tap confirm on the pop up dialogue. You will now see your device is removed from your Home Screen.
-              <br><br>
+              <i><strong>Removing A Delivered Home Mailbox <span style="color:red">(See items 6, 7 and 8)</span></strong></i>
+            <blockquote style="color: red; background-color: rgb(247, 215, 220); border-left: 5px solid red;">Proceed with caution <i class="tile-icon icon fa fa-exclamation-circle"></i></blockquote>
+            Choose the mailbox you wish to proceed with and then, tap the red ‘Remove Device’ button and confirm your action.
+            You will now see your device is removed from your Home Screen! <br><br>
             </p>
             <p>
-              <i><strong>Accepting Your Deliveries</strong></i>
+              <i><strong>Accepting Your Deliveries <span style="color:red">(See items 6, 7 and 9)</span></strong></i>
               <br>
-              In order to accept deliveries, you must keep the ‘Trap Door’ open. To do so navigate to [SOMETHING] and tap ‘Open’. Your mailbox is now ready to accept deliveries!
+              In order to accept deliveries, you must keep the ‘Delivery Door’ unlocked. To do so, choose the mailbox you wish to
+              proceed with and tap the ‘Open’ button. Your mailbox is now ready to accept deliveries!
               <br><br>
-              <i><strong>Accessing Your Deliveries</strong></i>
+              <i><strong>Prevent Deliveries <span style="color:red">(See items 6, 7 and 9)</span></strong></i>
               <br>
-              Important: Remember to lock your device again by tapping ‘Lock’ located beside ‘Unlock’!
+              In order to accept deliveries, you must keep the ‘Delivery Door’ locked. To do so, choose the mailbox you wish to
+              proceed with and tap the ‘Close’ button. Your mailbox is now ready to accept deliveries!
               <br><br>
-              <i><strong>Change Your Device Name</strong></i>
+              <i><strong>Accessing Your Deliveries <span style="color:red">(See items 6 and 10)</span></strong></i>
               <br>
-              Choose the mailbox you wish to proceed with and open the dropdown menu. Then, tap on ‘Full device information and settings’. From here, tap the textbox beside ‘Device name’ and simply type in what you like! The tap the ‘Save’ button located underneath the users.
+              Choose the mailbox you wish to proceed with and then tap ‘Unlock’. You will now be able to open the delivery door and
+              collect your parcel!
+              <br>
+              <i><span style="color:red">Important:</span> Remember to lock your device again by tapping ‘Lock’ located beside ‘Unlock’!</i>
               <br><br>
-              <i><strong>Remove A User With Access To Your Device</strong></i>
+              <i><strong>Change Your Device Name <span style="color:red">(See items 6, 7, 11)</span></strong></i>
               <br>
-              Choose the mailbox you wish to proceed with and open the dropdown menu. Then, tap on ‘Full device information and settings’. From here, tap the checkbox beside a users name and then tap the ‘Save’ button located underneath the users.
+              Choose the mailbox you wish to proceed with and tap the textbox beside ‘Device name’. Now simply type in what you like! Tap the ‘Save’ button located underneath the users to submit
+              <br><br>
+              <i><strong>Remove A User With Access To Your Device <span style="color:red">(See items 6, 7, 12)</span></strong></i>
+              <br>
+              Choose the mailbox you wish to proceed with, then tap the checkbox beside a users name. Tap ‘Save’ button located
+              underneath the users to confirm their removal.
               <br><br>
             </p>
-            <strong>Mailbox Notifications</strong>
+            <strong>Mailbox Notifications <span style="color:red">(See item 13)</span></strong>
+            <p>
+              Navigate to the Notifications by tapping the bell (middle) icon on the navigation bar located at the bottom of
+              your screen. You can dismiss notifications by swiping them to the left and filter notifications by device via the dropdown!
+            </p>
+            <strong>Help <span style="color:red">(See items 14 and 15)</span></strong>
             <div id="item-3-1"></div> <!-- anchor here to compensate for nav height -->
-            <p>Navigate to the Notifications by tapping the bell (middle) icon on the navigation bar located at the bottom of your screen.
-              <br>
-              To filter by a specific device, tap the dropdown menu at the top of the screen and select the mailbox you wish to view!
+            <p>
+              To find help at any time, tap the <i class="tile-icon icon fa fa-question-circle"></i> at the top right of your screen. Here you can scroll through
+              FAQs and read our full user guide. If you still need help, contact our user support via the text box at the bottom!
             </p>
 
             <div class="space"></div>
@@ -309,6 +432,227 @@
             <div class="space"></div>
 
             <h4>Troubleshooting</h4>
+            <h6>Drop-Off Area Door Open For Too Long</h6>
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Parcel size bigger than the box</td>
+                  <td>Instruct someone to remove parcel</td>
+                </tr>
+                <tr>
+                  <td>Door is not shut properly enough for the solenoid to lock in</td>
+                  <td>Instruct someone to push it further</td>
+                </tr>
+                <tr>
+                  <td>The mailbox is out of power</td>
+                  <td>Replace the battery</td>
+                </tr>
+                <tr>
+                  <td>The sensor readings are extremely noisy/sensors are broken</td>
+                  <td>You will notice that in such a case you will get an alert while the system works fine. <a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact hardware support</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h6>Secure Compartment Is Open Without Authorisation</h6>
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Someone who has access to your mailbox has unlocked it</td>
+                  <td>Check with people who have access to your mailbox. (You should be able to lock it yourself using the app.)</td>
+                </tr>
+                <tr>
+                  <td>You (or people with access to your mailbox) forgot to lock it</td>
+                  <td>Lock it using the app</td>
+                </tr>
+                <tr>
+                  <td>The mailbox is out of power</td>
+                  <td>Make sure the physical lock is in place. Replace battery</td>
+                </tr>
+                <tr>
+                  <td>The sensor readings are extremely noisy/sensors are broken</td>
+                  <td>You will notice that in such a case you will get an alert while the system works fine. <a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact hardware support</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h6>The Collapsible Door Is Stuck</h6>
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>A parcel is stuck and is unable to get through</td>
+                  <td>Remove the parcel and retry dropping it of</td>
+                </tr>
+                <tr>
+                  <td>The spring is broken</td>
+                  <td><a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact hardware support</a></td>
+                </tr>
+                <tr>
+                  <td>The secure compartment is full and the movable platform cannot move down any further to allow the collapsible platform to close back up</td>
+                  <td>Retrieve parcels from thesecure compartment</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h6>The Movable Platform Does Not Move As Expected</h6>
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>The mailbox is out of power (the platform won’t move at all)</td>
+                  <td>Replace the battery</td>
+                </tr>
+                <tr>
+                  <td>The motors are not functioning </td>
+                  <td><a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact hardware support</a></td>
+                </tr>
+                <tr>
+                  <td>There is some slippage</td>
+                  <td><a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact hardware support</a></td>
+                </tr>
+                <tr>
+                  <td>The infrared sensor in the secure compartment is broken/returns faulty feedback</td>
+                  <td><a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact hardware support</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h6>The App Will Not Operate The Secure Compartment / Drop-Off Area Locks</h6>
+            <div id="item-3-2"></div> <!-- anchor here to compensate for nav height -->
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>The mailbox is out of power (the platform won’t move at all) </td>
+                  <td>Replace the battery</td>
+                </tr>
+                <tr>
+                  <td>The solenoid is not working properly or is broken </td>
+                  <td><a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact hardware support</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br><br>
+            <h4>Software Help</h4>
+            <h6>Unable To Login / Logout</h6>
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Invalid email and/or password</td>
+                  <td>Ensure you’ve typed in the email and password correctly. If needed, reset your Google password</td>
+                </tr>
+                <tr>
+                  <td>Google services are down</td>
+                  <td><a href="https://support.google.com/accounts/troubleshooter/2402620?hl=en">Contact Google’s support</a> and keep an eye on <a href="https://downdetector.co.uk/status/google/">this website</a> to see if Google services are currently down</td>
+                </tr>
+                <tr>
+                  <td>No interent connection</td>
+                  <td>Ensure you’re have a strong Wi-Fi or data connection</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h6>Can't Add New Device</h6>
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>QR Code won’t scan</td>
+                  <td>Ensure the area is well lit and the whole QR Code is in the camera frame</td>
+                </tr>
+                <tr>
+                  <td>Wrong ID</td>
+                  <td>If you have manually entered in the ID, ensure it is 24 character long and is correct (case sensitive)</td>
+                </tr>
+                <tr>
+                  <td>QR Code’s ID is incorrect</td>
+                  <td><a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact software support</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h6>Can’t Operate Your Mailbox</h6>
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>No internet connection</td>
+                  <td>Ensure you’re have a strong Wi-Fi or data connection</td>
+                </tr>
+                <tr>
+                  <td>The locking mechanism is faulty</td>
+                  <td><a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact hardware support</a></td>
+                </tr>
+                <tr>
+                  <td>You no longer have access to the mailbox</td>
+                  <td>The owner may have removed you and your account needs to be refreshed. Log in and out and re-add the mailbox. If you are the owner, <a href="mailto:DeliverEDHome.SDP21@gmail.com">Contact software support</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h6>Can’t Edit Mailbox Settings</h6>
+            <table class="table bordered striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Causes</abbr></th>
+                  <th><abbr title="Title2">Solutions</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>No internet connection</td>
+                  <td>Ensure you’re have a strong Wi-Fi or data connection</td>
+                </tr>
+                <tr>
+                  <td>You are not the owner</td>
+                  <td>Only the owner can edit these settings - please ask the owner to make your changes</td>
+                </tr>
+              </tbody>
+            </table>
 
             <div class="space"></div>
             <code><i class="tile-icon icon far fa-question-circle"></i> Still need help? <a class="contact" href="mailto:DeliverEDHome.SDP21@gmail.com">Email us</a>!</code>
