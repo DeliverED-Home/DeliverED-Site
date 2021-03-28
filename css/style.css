@@ -347,6 +347,11 @@ a#cirrus-link {
   text-decoration: underline;
 }
 
+a#fa-link {
+  color: #92b1cf !important;
+  text-decoration: underline;
+}
+
 #contents {
   background-color: #fefefe;
 }
