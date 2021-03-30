@@ -462,11 +462,17 @@
 
         <div class="row">
           <div class="col-9">
-            <h6>Functionality Overview</h6>
-            <p>Your DeliverED Home mailbox is made up of two sections – the delivery and secure sections. The delivery section is the top door of the device where packages can be placed inside to be delivered. This section can be locked by your
-              app
-              to prevent deliveries if you’re not expecting any. The secure section is where your packages are stored, accessed via the bottom door. This door is always locked, unless opened via the DeliverED app or emergency manual key. Inside
-              you’ll find your packages neatly piled up on top of a lift mechanism that is used during the delivery process. How to perform actions using the app are detailed under the <a href="#todo">Software Operation</a>.</p>
+            <h6>System Summary</h6>
+              <p>All functionalities of our mailboxes are managed within either the physical device, or by our app. The human interaction process for a package delivery via our devices is as follows. First, the courier opens the delivery compartment, places a package inside, and pushes a clearly labelled “Deliver” button on the top of the device. The package is then dropped into a secure compartment. Internally, the delivery process is as follows:</p>
+            <ol>
+              <li>Deliver button is pushed and delivery door locked.</li>
+              <li>Internal lift is raised to its maximum height, taking into account existing packages. This height is detected via an infrared sensor on the inside.</li>
+              <li>Trapdoor is unlocked, dropping the package a very short distance onto the lift platform.</li>
+              <li>Internal lift is lowered all the way down.</li>
+              <li>Trapdoor is closed, and the delivery door unlocks.</li>
+            </ol>
+            <h6>Inside the Mailbox</h6>
+            <p>The DeliverED Home mailbox is made up of two sections – the delivery compartment and the secure compartment. The delivery section is the top door of the device where packages can be placed inside by couriers. This section can be locked by the app to prevent deliveries if you’re not expecting any, and when the mailbox is full. The secure section is where your packages are stored, accessible via the bottom door. This door is always locked, unless opened via the DeliverED app or emergency manual key. Inside you will find your packages neatly piled up on top of a lift mechanism that is used during the delivery process. How to perform actions using the app is detailed under <a href="#todo">Software Operation</a>.</p>
               <div class="row u-center">
                 <div class="col-3">
                   <figure class="fig">
@@ -567,7 +573,7 @@
         <strong>Yale key mechanism:</strong> (See Figure 3) This functions as the emergency manual unlock for the secure section. When the
         correct key is inserted, the door is unlocked. This overrides any signal being given to the solenoid and is primarily used
         if the system has run out of power. <br><br>
-        <strong>8-Way AA Power Supply:</strong> (See Figure 6) The is what powers the the Particle Photon and all the components of
+        <strong>8-Way AA Power Supply:</strong> (See Figure 6) This is what powers the the Particle Photon and all the components of
         the mailbox - the infrared sensors, the solenoid lock, the forklift and the collapsible door. <br><br>
         <strong>Delivery button:</strong> This is visible on the outside of the device and is a simple button that when pressed sends a signal
         to the Photon. This triggers a function within the device that begins the delivery sequence so long as it also detects that
@@ -576,25 +582,7 @@
         <div class="space"></div>
         <div class="space"></div>
 
-        <h6>Hardware Operation</h6>
-        <p><strong>Deliver a package</strong>
-          <br>
-          When a mailperson arrives to deliver a package, the process is simple. First, they will open the upper door and place the
-          package inside the delivery section. Next, the door is then closed again and once done they may can press the ‘deliver’
-          button on the front of the device. This is all the input required to deliver a package, unless the mailbox is full or otherwise
-          locked. <br><br>
-          Internally, the delivery process is as follows:
-        </p>
         <div class="row">
-          <div class="col-6">
-            <ol>
-              <li>Deliver button is pressed and delivery door locked.</li>
-              <li>Internal lift is raised to its maximum height, taking into account existing packages. This height is detected via an infrared sensor on the inside.</li>
-              <li>Trapdoor is unlocked, dropping the package a very short distance onto the lift platform.</li>
-              <li>Internal lift is lowered all the way down.</li>
-              <li>Trapdoor is closed, and the delivery door unlocked.</li>
-            </ol>
-          </div>
           <div class="col-6">
             <div class="row u-center" style="padding-left: 120px;">
               <div class="col-3">
@@ -611,10 +599,11 @@
         </div>
 
         <div class="space"></div>
-        <h6>Software Operation</h6>
+        <h6>The App</h6>
         <p>
-          This section will cover how to use the companion Android application. Please refer to the Troubleshooting section if you
-          encounter any issues completing these tasks.
+Since our users will control and use our mailboxes entirely through our app, we have taken care to make our User Interface as accessible and usable as possible, to ensure that our device is optimised for use by everyone. We have taken care to make everyday actions like unlocking and locking your mailbox as easy as possible, with little to no app navigation necessary. Our blue and green colour scheme gives our users a sense of security, which is extremely important when trusting an automated machine to handle personal parcels. <br>
+            <br>Our app communicates directly with our mailboxes via a particle photon. Each mailbox has its own photon, with a unique ID used to identify and register your device. This connection facilitates all sensors and actions carried out by the physical device. Photons communicate via the cloud, so there is no need for us to be storing any personal data of our users, which we believe is a huge selling point for our devices. <br>
+The major use cases of our app are detailed below:
         </p>
         <div class="row">
           <div class="col-10 offset-1">
