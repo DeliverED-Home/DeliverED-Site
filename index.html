@@ -785,7 +785,7 @@
           </div>
           <div class="col-6">
             <div class="space"></div>
-            <table class="table striped small bordered">
+            <table class="table  small bordered">
               <thead>
                 <tr>
                   <th><abbr title="Title1">T1</abbr></th>
@@ -909,7 +909,7 @@
           </div>
           <div class="col-6">
             <div class="space"></div>
-            <table class="table striped small bordered">
+            <table class="table  small bordered">
               <thead>
                 <tr>
                   <th><abbr title="Title1">T1</abbr></th>
@@ -1494,96 +1494,206 @@
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-12">
+            <p>
+              We tested the open/closed state of our solenoid by both
+              operating it with our microcontroller and manipulating it
+              manually, then checking the sensor readings for whether
+              they reflect it being pulled in or pushed out. On average,
+              the readings were accurate 4/5 times. We suspect that the
+              sensor readings are not entirely accurate due to some noise
+              present in them. We ran a similar test after manipulating our
+              latch and the latch sensor returned expected values between
+              3/5 and 4/5 times, with some noise accounting for 1 or 2
+              unexpected readings. For each case, we changed states (i.e.,
+              between 0 and 1) 5 times[1]. When returning the state of
+              the above components to the app, we look at readings in
+              groups of 5. If 3 or more readings are the same, we report
+              the state that corresponds to the majority reading.
+            </p>
+            <p>
+              Our remote technition was present at the lab to confirm that our solenoid
+              was working as expected at all points, which means that it
+              was pulled in at our "on" command and pushed out at our
+              "off" command (as was implemented using the microcontroller).
+            </p>
+            <p>
+              We also tested our secure compartment mechanisms which
+              included a forklift driven by a motor and two infrared sensors. One sensor (s1) is at the top of the compartment (at
+              33 cm), pointing across it and mounted onto a wall adjacent
+              to the doors. The other sensor (s2) is at the bottom of the
+              compartment, pointing upwards. If s1 returns less than 19
+              cm (width of the compartment),then we know a parcel has
+              entered the secure compartment. Readings from s2 let us
+              know the distance of the moving platform from the floor.
+            </p>
+            <p>
+              We ran 30 iterations of the movable platform’s upward and
+              downward movement to decide on thresholds of when it
+              should stop. The forklift is about 48 cm high. To allow for
+              the parcel some space to enter the secure compartment and
+              drop into the platform, we stop it at 31-32 cm when going
+              up. We want to stop the platform at a 4-5 cm distance from
+              the floor to avoid it ramming into the sensor s2 when going
+              down.
+            </p>
+            <p>
+              We ran 5 iterations of dropping a single parcel into the
+              movable platform. It stopped after moving down far enough
+              to clear s1’s ’line of vision’ a 100% of the times. We ran
+              another 5 iterations with multiple boxes (3), placed one after
+              the other. The forklift moved down as expected a 100% of
+              the times. Upon placing a parcel such that s1 returned a
+              reading of less than 19 cm while the moving platform was
+              at 4 cm from the ground, it did not move down any further,
+              which is the desired behaviour. In this state, we are able to
+              raise a flag of "Mailbox is full".
+            </p>
+            <p>
+              We also had to allow for a little noise in our infrared sensors.
+              Sensor s1 gives a reading which sometimes varies between 19 and 20 cm while there is no parcel. We take the lower
+              threshold, i.e., 19 cm, to check against. This worked well
+              for our above test cases. Sensor s2 gives a similar varying
+              reading, which is why we allowed a 1 cm interval when
+              deciding the thresholds as discussed previously.
+            </p>
+          </div>
+        </div>
+
+        <div class="row u-none-xs u-none-sm-only">
+          <div class="col-4 offset-1">
+            <div class="divider"></div>
+          </div>
+          <div class="col-2">
+            <h6 class="divider-title">Software Testing</h6>
+          </div>
+          <div class="col-4">
+            <div class="divider"></div>
+          </div>
+        </div>
+
+        <div class="space u-none-sm"></div>
+
+        <div class="row u-none-sm">
+          <div class="col-xs-4">
+            <div class="divider"></div>
+          </div>
+          <div class="col-xs-4">
+            <h6 class="divider-title">Software Testing</h6>
+          </div>
+          <div class="col-xs-4">
+            <div class="divider"></div>
+          </div>
+        </div>
+
         <div class="row" style="overflow-x:scroll">
           <div class="col-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptas, a! Consequatur, similique ab blanditiis quos deleniti sapiente ducimus aliquid saepe ut qui quae quidem, dolor tenetur, nihil nemo fugit. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Porro ut consectetur excepturi? Aliquid veniam quos tenetur facilis architecto! Dolorum debitis excepturi fugit dignissimos voluptatum libero dolore eius est deleniti neque. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Soluta maiores quaerat eligendi dolores facilis quia itaque dolor sequi harum, odit voluptate ipsam porro quos consequatur, blanditiis sapiente nulla dolore. Dolor.
+            <!-- <p>
+              Notification system has been tested. A success in testing
+              represents a notification can be successfully generated by a
+              given HTTP message and then display in alert page. Testing
+              results are shown in the table on the right.
+            </p> -->
+            <p>
+              We ran multiple test for the Webots
+              simulation in order to ensure its robustness and investigate
+              its capacity. Even though its simulation testing, in order
+              to present a real-life scenario, the parcel size and process
+              are strictly following the maximum standard of <a class="u u-C blue-link" href="https://business.help.royalmail.com/app/answers/detail/a_id/89/~/size-and-weight-guide-%E2%80%93-uk-letters-and-parcels">Royal Mail
+                UK Parcels Size and Weight</a>. The length of UV sanitation
+              differs based on parcel size after research <a class="u u-C blue-link" href="https://www.researchgate.net/publication/344204496_Effectiveness_of_222-nm_ultraviolet_light_on_disinfecting_SARS-CoV-2_surface_contamination">(Hiroki
+                Kitagawa,
+                et al.)</a>.
             </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptas, a! Consequatur, similique ab blanditiis quos deleniti sapiente ducimus aliquid saepe ut qui quae quidem, dolor tenetur, nihil nemo fugit. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Porro ut consectetur excepturi? Aliquid veniam quos tenetur facilis architecto! Dolorum debitis excepturi fugit dignissimos voluptatum libero dolore eius est deleniti neque. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Soluta maiores quaerat eligendi dolores facilis quia itaque dolor sequi harum, odit voluptate ipsam porro quos consequatur, blanditiis sapiente nulla dolore. Dolor.
+            <p>
+              From the experiments we could tell that for the current
+              size of the mailbox (75cm*75cm*100cm), it could take 12
+              max-size letters, or 5 max-size small parcels, or 1 maxsize medium parcels. Blueprints and actual simulations
+              are provided as screenshots. Though the large size parcel
+              cannot be put into our mailbox, according to Royal Mail
+              standard, large parcel has a length of 1.5 meters, such
+              large parcels (e.g. television, furniture, etc.) are better to be
+              handled in person, which is not considered as our product
+              initiative.
             </p>
           </div>
           <div class="col-6">
             <div class="space"></div>
-            <table class="table striped small bordered">
+            <table class="table small bordered">
               <thead>
                 <tr>
-                  <th><abbr title="Title1">T1</abbr></th>
-                  <th><abbr title="Title2">T2</abbr></th>
-                  <th><abbr title="Title3">T3</abbr></th>
-                  <th><abbr title="Title4">T4</abbr></th>
-                  <th><abbr title="Title5">T5</abbr></th>
-                  <th><abbr title="Short">S</abbr></th>
-                  <th>Notes</th>
+                  <th><abbr title="Title1">Parcel Type</abbr></th>
+                  <th><abbr title="Title2">Total Parcels</abbr></th>
+                  <th><abbr title="Title3">Total Volume (L)</abbr></th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
-                  <th><abbr title="Title1">T1</abbr></th>
-                  <th><abbr title="Title2">T2</abbr></th>
-                  <th><abbr title="Title3">T3</abbr></th>
-                  <th><abbr title="Title4">T4</abbr></th>
-                  <th><abbr title="Title5">T5</abbr></th>
-                  <th><abbr title="Short">S</abbr></th>
-                  <th>Notes</th>
+                  <th><abbr title="Title1">Parcel Type</abbr></th>
+                  <th><abbr title="Title2">Total Parcels</abbr></th>
+                  <th><abbr title="Title3">Total Volume</abbr></th>
                 </tr>
               </tfoot>
               <tbody>
                 <tr>
-                  <th>1</th>
-                  <td>Row:1 Cell:1</td>
-                  <td>Row:1 Cell:2</td>
-                  <td>Row:1 Cell:3</td>
-                  <td>Row:1 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:1 Cell:5</td>
+                  <th>Letters</th>
+                  <td>12</td>
+                  <td>132</td>
                 </tr>
                 <tr>
-                  <th>2</th>
-                  <td>Row:2 Cell:1</td>
-                  <td>Row:2 Cell:2</td>
-                  <td>Row:2 Cell:3</td>
-                  <td>Row:2 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:2 Cell:5</td>
+                  <th>Small</th>
+                  <td>5</td>
+                  <td>125</td>
                 </tr>
                 <tr>
-                  <th>3</th>
-                  <td>Row:3 Cell:1</td>
-                  <td>Row:3 Cell:2</td>
-                  <td>Row:3 Cell:3</td>
-                  <td>Row:3 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:3 Cell:5</td>
+                  <th>Medium</th>
+                  <td>1</td>
+                  <td>129</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table small bordered">
+              <thead>
+                <tr>
+                  <th><abbr title="Title1">Parcel Type</abbr></th>
+                  <th><abbr title="Title2">Volume (L)</abbr></th>
+                  <th><abbr title="Title3">Process Time</abbr></th>
+                  <th><abbr title="Title4">Error (Y/N)</abbr></th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th><abbr title="Title1">Parcel Type</abbr></th>
+                  <th><abbr title="Title2">Volume (L)</abbr></th>
+                  <th><abbr title="Title3">Process Time*</abbr></th>
+                  <th><abbr title="Title4">Error (Y/N)</abbr></th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <th>Letter</th>
+                  <td>2.2</td>
+                  <td>5 + 10</td>
+                  <td>N</td>
                 </tr>
                 <tr>
-                  <th>4</th>
-                  <td>Row:4 Cell:1</td>
-                  <td>Row:4 Cell:2</td>
-                  <td>Row:4 Cell:3</td>
-                  <td>Row:4 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:4 Cell:5</td>
+                  <th>Small</th>
+                  <td>25</td>
+                  <td>7 + 20</td>
+                  <td>N</td>
                 </tr>
                 <tr>
-                  <th>5</th>
-                  <td>Row:5 Cell:1</td>
-                  <td>Row:5 Cell:2</td>
-                  <td>Row:5 Cell:3</td>
-                  <td>Row:5 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:5 Cell:5</td>
+                  <th>Medium</th>
+                  <td>129</td>
+                  <td>10 + 30</td>
+                  <td>N</td>
                 </tr>
                 <tr>
-                  <th>6</th>
-                  <td>Row:6 Cell:1</td>
-                  <td>Row:6 Cell:2</td>
-                  <td>Row:6 Cell:3</td>
-                  <td>Row:6 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:6 Cell:5</td>
+                  <th>Large</th>
+                  <td>3375</td>
+                  <td>N/A</td>
+                  <td>Y (Too big)</td>
                 </tr>
               </tbody>
             </table>
@@ -1866,7 +1976,7 @@
           </div>
           <div class="col-6">
             <div class="space"></div>
-            <table class="table striped small bordered">
+            <table class="table  small bordered">
               <thead>
                 <th></th>
                 <th colspan="5">Difficulty Score (1 [very easy] - 10 [very hard])</th>
