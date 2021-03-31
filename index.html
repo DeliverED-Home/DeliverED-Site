@@ -1620,40 +1620,47 @@
           </div>
           <div class="col-6">
             <div class="space"></div>
-            <table class="table small bordered">
-              <thead>
-                <tr>
-                  <th><abbr title="Title1">Parcel Type</abbr></th>
-                  <th><abbr title="Title2">Total Parcels</abbr></th>
-                  <th><abbr title="Title3">Total Volume (L)</abbr></th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th><abbr title="Title1">Parcel Type</abbr></th>
-                  <th><abbr title="Title2">Total Parcels</abbr></th>
-                  <th><abbr title="Title3">Total Volume</abbr></th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <th>Letters</th>
-                  <td>12</td>
-                  <td>132</td>
-                </tr>
-                <tr>
-                  <th>Small</th>
-                  <td>5</td>
-                  <td>125</td>
-                </tr>
-                <tr>
-                  <th>Medium</th>
-                  <td>1</td>
-                  <td>129</td>
-                </tr>
-              </tbody>
-            </table>
-            <table class="table small bordered">
+            <figure class="fig">
+              <table class="table small bordered">
+                <thead>
+                  <tr>
+                    <th><abbr title="Title1">Parcel Type</abbr></th>
+                    <th><abbr title="Title2">Total Parcels</abbr></th>
+                    <th><abbr title="Title3">Total Volume (L)</abbr></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th><abbr title="Title1">Parcel Type</abbr></th>
+                    <th><abbr title="Title2">Total Parcels</abbr></th>
+                    <th><abbr title="Title3">Total Volume</abbr></th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>Letters</th>
+                    <td>12</td>
+                    <td>132</td>
+                  </tr>
+                  <tr>
+                    <th>Small</th>
+                    <td>5</td>
+                    <td>125</td>
+                  </tr>
+                  <tr>
+                    <th>Medium</th>
+                    <td>1</td>
+                    <td>129</td>
+                  </tr>
+                </tbody>
+              </table>
+              <figcaption class="fig-caption u-text-center">
+                Table 1: Evaluation of maximum capacity of different size parcels
+              </figcaption>
+            </figure>
+            <div class="space"></div>
+            <figure class="fig">
+              <table class="table small bordered">
               <thead>
                 <tr>
                   <th><abbr title="Title1">Parcel Type</abbr></th>
@@ -1697,6 +1704,10 @@
                 </tr>
               </tbody>
             </table>
+              <figcaption class="fig-caption u-text-center">
+                Table 2: Evaluation of different size parcels (*Process Time is denoted as conveying + UV sanitation)
+              </figcaption>
+            </figure>
           </div>
         </div>
 
@@ -1764,151 +1775,157 @@
           </div>
           <div class="col-6">
             <div class="space"></div>
-            <table class="table small bordered">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th><abbr title="Title1">Function Test</abbr></th>
-                  <th><abbr title="Title2"># of Tests</abbr></th>
-                  <th><abbr title="Title3">Error Rate</abbr></th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th></th>
-                  <th><abbr title="Title1">Function Test</abbr></th>
-                  <th><abbr title="Title2"># of Tests</abbr></th>
-                  <th><abbr title="Title3">Error Rate</abbr></th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <th rowspan="11"><span>Notifications</span></th>
-                  <th>Locked</th>
-                  <td>1000</td>
-                  <td>1.2%</td>
-                </tr>
-                <tr>
-                  <th>Unocked</th>
-                  <td>1000</td>
-                  <td>0.8%</td>
-                </tr>
-                <tr>
-                  <th>Received Parcel</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Compartment Full</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Low Charge</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>No Charge</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Location Changed</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Connect</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Disconnect from Device</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Paired with Device</th>
-                  <td>1000</td>
-                  <td>2.5%</td>
-                </tr>
-                <tr>
-                  <th>Remove Device</th>
-                  <td>1000</td>
-                  <td>4.8%</td>
-                </tr>
-                <tr>
-                  <th rowspan="5">Home Page</th>
-                  <th>Lock Device</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Unlock Device</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Add Device</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Remove Device</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Device Full Details</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th rowspan="3">Devices (Home) Page</th>
-                  <th>Lock Device</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Unlock Device</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Remove Device</th>
-                  <td>1000</td>
-                  <td>5%</td>
-                </tr>
-                <tr>
-                  <th rowspan="2">Account Page</th>
-                  <th>User Guide</th>
-                  <td>1000</td>
-                  <td>0%</td>
-                </tr>
-                <tr>
-                  <th>Log Out</th>
-                  <td>1000</td>
-                  <td>2%</td>
-                </tr>
-                <tr>
-                  <th rowspan="3">Navigation Bar</th>
-                  <th>Home Page</th>
-                  <td>1000</td>
-                  <td>5.3%</td>
-                </tr>
-                <tr>
-                  <th>Notifications Page</th>
-                  <td>1000</td>
-                  <td>1.2%</td>
-                </tr>
-                <tr>
-                  <th>Navigation Page</th>
-                  <td>1000</td>
-                  <td>7.7%</td>
-                </tr>
-              </tbody>
-            </table>
+            <figure class="fig">
+              <table class="table small bordered">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th><abbr title="Title1">Function Test</abbr></th>
+                    <th><abbr title="Title2"># of Tests</abbr></th>
+                    <th><abbr title="Title3">Error Rate</abbr></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th></th>
+                    <th><abbr title="Title1">Function Test</abbr></th>
+                    <th><abbr title="Title2"># of Tests</abbr></th>
+                    <th><abbr title="Title3">Error Rate</abbr></th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th rowspan="11"><span>Notifications</span></th>
+                    <th>Locked</th>
+                    <td>1000</td>
+                    <td>1.2%</td>
+                  </tr>
+                  <tr>
+                    <th>Unocked</th>
+                    <td>1000</td>
+                    <td>0.8%</td>
+                  </tr>
+                  <tr>
+                    <th>Received Parcel</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Compartment Full</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Low Charge</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>No Charge</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Location Changed</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Connect</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Disconnect from Device</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Paired with Device</th>
+                    <td>1000</td>
+                    <td>2.5%</td>
+                  </tr>
+                  <tr>
+                    <th>Remove Device</th>
+                    <td>1000</td>
+                    <td>4.8%</td>
+                  </tr>
+                  <tr>
+                    <th rowspan="5">Home Page</th>
+                    <th>Lock Device</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Unlock Device</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Add Device</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Remove Device</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Device Full Details</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th rowspan="3">Devices (Home) Page</th>
+                    <th>Lock Device</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Unlock Device</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Remove Device</th>
+                    <td>1000</td>
+                    <td>5%</td>
+                  </tr>
+                  <tr>
+                    <th rowspan="2">Account Page</th>
+                    <th>User Guide</th>
+                    <td>1000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th>Log Out</th>
+                    <td>1000</td>
+                    <td>2%</td>
+                  </tr>
+                  <tr>
+                    <th rowspan="3">Navigation Bar</th>
+                    <th>Home Page</th>
+                    <td>1000</td>
+                    <td>5.3%</td>
+                  </tr>
+                  <tr>
+                    <th>Notifications Page</th>
+                    <td>1000</td>
+                    <td>1.2%</td>
+                  </tr>
+                  <tr>
+                    <th>Navigation Page</th>
+                    <td>1000</td>
+                    <td>7.7%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <figcaption class="fig-caption u-text-center">
+                Table 3: Android App Stress Testing
+              </figcaption>
+            </figure>
+
           </div>
         </div>
 
@@ -1948,134 +1965,142 @@
               of both native and non-native English speakers as well as
               students with and without a technical background helped us
               shed some light onto how different people would interact
-              with our app. All of them found our terminology intuitive
-              and the app mostly easy to use. We noted their interactions
-              to note any improvements that our app might need in future
-              development cycles.
+              with our app.
             </p>
             <p>
-              We contacted the participants
-              through university’s email. We sent them a summary of
-              our study along with our ’Participant Information Sheet’
-              and ’Consent Form’, the latter of which the participants
-              signed and returned to us. The testing was conducted as
+              The testing was conducted as
               a recorded video call with each of the participants, where
               they were given access to our app’s user interface through a
               rendering on <a class="u u-C blue-link" href="https://www.figma.com/proto/8aGzkBc5NH4CKAhbOSKRtx/DHome-Usability-Testing?node-id=0%3A1">Figma</a>. We described our project to them
               and how the app ties with the hardware. They were then
               asked to perform certain tasks using the app and rate how
-              difficult it was for them to complete the tasks. A difficulty
-              of 1 corresponds to ’extremely easy’ whereas a difficulty
-              of 10 corresponds to ’extremely difficult’. We also noted
+              difficult it was for them to complete the tasks. We also noted
               some useful comments while analysing the participant’s
               interaction with our app. At the end we asked them some
               general questions and documented their feedback.
             </p>
+            <p>The tasks were:</p>
+            <ol>
+              <li>Login and view your account</li>
+              <li>Determine the status of Jane’s mailbox delivery door, battery life and storage capacity</li>
+              <li>Add a new device via the QR code on the mailbox</li>
+              <li>Unlock and lock your new device</li>
+              <li>Edit your device name and remove Jane from the device then save those settings</li>
+              <li>Remove your device</li>
+              <li>View all your notifications, then just John's mailbox notifications</li>
+              <li>Find help for errors</li>
+              <li>Log out</li>
+            </ol>
             <br>
-            <button class="btn-link" onclick="location.href='assets/files/usability-testing.pdf'">Read More</button>
+            <button class="btn-link" onclick="location.href='assets/files/usability-testing.pdf'">Read Source Notes</button>
           </div>
           <div class="col-6">
             <div class="space"></div>
-            <table class="table  small bordered">
-              <thead>
-                <th></th>
-                <th colspan="5">Difficulty Score (1 [very easy] - 10 [very hard])</th>
-              </thead>
-              <thead>
-                <tr>
-                  <th><abbr title="Title1">Task No.</abbr></th>
-                  <th><abbr title="Title2">Partcipant 1</abbr></th>
-                  <th><abbr title="Title3">Partcipant 2</abbr></th>
-                  <th><abbr title="Title4">Partcipant 3</abbr></th>
-                  <th><abbr title="Title5">Partcipant 4</abbr></th>
-                  <th><abbr title="Title6">Partcipant 5</abbr></th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th><abbr title="Title1">Task No.</abbr></th>
-                  <th><abbr title="Title2">Partcipant 1</abbr></th>
-                  <th><abbr title="Title3">Partcipant 2</abbr></th>
-                  <th><abbr title="Title4">Partcipant 3</abbr></th>
-                  <th><abbr title="Title5">Partcipant 4</abbr></th>
-                  <th><abbr title="Title6">Partcipant 5</abbr></th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <th>1</th>
-                  <td>6-7</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>2</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <th>2</th>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <th>3</th>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>1-2</td>
-                  <td>1</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <th>4</th>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <th>5</th>
-                  <td>2-3</td>
-                  <td>1</td>
-                  <td>3</td>
-                  <td>3</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <th>6</th>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <th>7</th>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <th>8</th>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>1</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <th>9</th>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2</td>
-                </tr>
-              </tbody>
-            </table>
+            <figure class="fig">
+              <table class="table  small bordered">
+                <thead>
+                  <th></th>
+                  <th colspan="5">Difficulty Score (1 [very easy] - 10 [very hard])</th>
+                </thead>
+                <thead>
+                  <tr>
+                    <th><abbr title="Title1">Task No.</abbr></th>
+                    <th><abbr title="Title2">Partcipant 1</abbr></th>
+                    <th><abbr title="Title3">Partcipant 2</abbr></th>
+                    <th><abbr title="Title4">Partcipant 3</abbr></th>
+                    <th><abbr title="Title5">Partcipant 4</abbr></th>
+                    <th><abbr title="Title6">Partcipant 5</abbr></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th><abbr title="Title1">Task No.</abbr></th>
+                    <th><abbr title="Title2">Partcipant 1</abbr></th>
+                    <th><abbr title="Title3">Partcipant 2</abbr></th>
+                    <th><abbr title="Title4">Partcipant 3</abbr></th>
+                    <th><abbr title="Title5">Partcipant 4</abbr></th>
+                    <th><abbr title="Title6">Partcipant 5</abbr></th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>6-7</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>1-2</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>2-3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>7</th>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th>8</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th>9</th>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                  </tr>
+                </tbody>
+              </table>
+              <figcaption class="fig-caption u-text-center">
+                Table 4: Usability Test Scores
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
