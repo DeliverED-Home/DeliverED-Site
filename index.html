@@ -22,6 +22,58 @@
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/3883f392c5.js" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart1);
+    google.charts.setOnLoadCallback(drawChart2);
+
+    // Draw the chart and set the chart values
+    function drawChart1() {
+      var data1 = google.visualization.arrayToDataTable([
+        ['Action', 'Cost (GBP)'],
+        ['Used', 18.67],
+        ['Not Used', 181.33],
+      ]);
+
+      // Optional; add a title and set the width and height of the chart
+      var options1 = {
+        'title': '£200 Budget Consumption (£GBP)',
+        'width': 550,
+        'height': 400,
+        'is3D': true
+      };
+
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart-budget'));
+      chart.draw(data1, options1);
+    }
+
+    // Draw the chart and set the chart values
+    function drawChart2() {
+      var data2 = google.visualization.arrayToDataTable([
+        ['Action', 'Cost (hrs)'],
+        ['Used', 11.5],
+        ['Not Used', 12.5],
+      ]);
+
+      // Optional; add a title and set the width and height of the chart
+      var options2 = {
+        'title': '24hr Technician Time Budget Consumption (£GBP)',
+        'width': 550,
+        'height': 400,
+        'is3D': true
+      };
+
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart-tech'));
+      chart.draw(data2, options2);
+    }
+  </script>
 </head>
 
 <body>
@@ -751,7 +803,7 @@
             <div class="divider"></div>
           </div>
           <div class="col-2">
-            <h6 class="divider-title">Prototype Breakdown</h6>
+            <h6 class="divider-title">Real Build Breakdown</h6>
           </div>
           <div class="col-4">
             <div class="divider"></div>
@@ -765,7 +817,7 @@
             <div class="divider"></div>
           </div>
           <div class="col-xs-4">
-            <h6 class="divider-title">Prototype Breakdown</h6>
+            <h6 class="divider-title">Real Build Breakdown</h6>
           </div>
           <div class="col-xs-4">
             <div class="divider"></div>
@@ -774,97 +826,151 @@
 
         <div class="row" style="overflow-x:scroll">
           <div class="col-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptas, a! Consequatur, similique ab blanditiis quos deleniti sapiente ducimus aliquid saepe ut qui quae quidem, dolor tenetur, nihil nemo fugit. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Porro ut consectetur excepturi? Aliquid veniam quos tenetur facilis architecto! Dolorum debitis excepturi fugit dignissimos voluptatum libero dolore eius est deleniti neque. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Soluta maiores quaerat eligendi dolores facilis quia itaque dolor sequi harum, odit voluptate ipsam porro quos consequatur, blanditiis sapiente nulla dolore. Dolor.
+            <h6>The Walls</h6>
+            <p>
+              For the walls of the mailbox, we can use
+              stainless steel<sup><a class="u u-C blue-link"
+                  href="https://uk.rs-online.com/web/p/metal-sheets/0559111/?cm_mmc=UK-PLA-DS3A-_-google-_-PLA_UK_EN_Engineering_Materials_%26_Industrial_Hardware_Whoop-_-Stainless%20Steel%20Sheets_Whoop-_-559111&gclid=CjwKCAjw3pWDBhB3EiwAV1c5rNEwPtiD05Ts7fbEI-cH-itfk6fUxlKepf4HNEEZbpT5zayMJCZo2RoCnhkQAvD_BwE&gclsrc=aw.ds&matchtype=&pla-302964212382">1</a></sup>.
+              This will prove to be both sturdy and
+              weather resistant. It is corrosion and erosion resistant,
+              and it will not be easy to cut through. We can also
+              paint it, giving customers an option to customise their
+              mailbox. Stainless steel is also less likely to be affected
+              by exposure to UV light, considering we are planning
+              on providing the option of UV sanitisation. The price
+              related to this can be ascertained after meeting with
+              our potential production partners.
             </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptas, a! Consequatur, similique ab blanditiis quos deleniti sapiente ducimus aliquid saepe ut qui quae quidem, dolor tenetur, nihil nemo fugit. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Porro ut consectetur excepturi? Aliquid veniam quos tenetur facilis architecto! Dolorum debitis excepturi fugit dignissimos voluptatum libero dolore eius est deleniti neque. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Soluta maiores quaerat eligendi dolores facilis quia itaque dolor sequi harum, odit voluptate ipsam porro quos consequatur, blanditiis sapiente nulla dolore. Dolor.
+            <h6>Movable Platform</h6>
+            <p>We can build the movable platform using stainless steel as well. We will probably
+              have to use more powerful motors as compared to
+              the ones we are using in the workshop. The price related to this can be ascertained after meeting with our
+              potential production partners.
+            </p>
+            <h6>Handyperson for installation</h6>
+            <p>
+              We suggest 2 people for
+              2 hours for installing the smart mailbox according to
+              the customers’ preference. The average hourly rate of
+              a handyman is £11.71<sup><a class="u u-C blue-link" href="https://www.payscale.com/research/UK/Job=Handyman/Hourly_Rate.">2</a></sup>. So the total installation fee
+              will be £46.84.
+            </p>
+            <h6>UV Sterilizer LED</h6>
+            <p>We expect there to be 2 such
+              LEDs (110 V, US) on 2 opposite walls (the ones adjacent to the access doors). The total comes to £24.02
+              (£12.01 each)<sup><a class="u u-C blue-link"
+                  href="https://uk.banggood.com/50W-UV-LED-Ultraviolet-Sterilizer-Lamp-Germicidal-Disinfection-Mite-Removal-p-1685241.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=GB&utm_content=minha&utm_campaign=minha-gbg-en-pc&currency=GBP&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgs&utm_content=sxxx&utm_campaign=sxxx-ssc-gbg-all-newcustom-ncv80-0928&ad_id=468370263002&gclid=CjwKCAiAgc-ABhA7EiwAjev-j24qHFNyqYHWovR-0uR6sUqkLh0BnBq5BSeRZAGhFRHUdECgRBSD2BoCOLMQAvD_BwE&ID=566615">3</a>.
+            </p>
+            <h6>Locks</h6>
+            <p>All materials for the lock are expected to remain the same, although upon a future round of testing
+              (hypothetically) if we find that the locks are not sturdy
+              enough to withstand brute force, we might have to
+              look at certain improvements, although the core mechanisms stay the same. The cost for building the current
+              electromagnetic locks have been included in the budget.
+            </p>
+            <h6>Bascule trap door / collapsible platform</h6>
+            <p>This platform separates the drop-off area and the secure compartment. We can use RSPro struts, which are £41 per
+              metre and angle joints for RSPro struts, which are £5
+              each<sup><a class="u u-C blue-link" href="http://www.inf.ed.ac.uk/teaching/courses/sdp/SDP2020/sdppricelist.pdf">4</a></sup>.
+            </p>
+            <h6>Particle Photon</h6>
+            <p>
+              The IoT computer responsible for taking commands from our app and controlling the mailbox.
+            </p>
+            <h6>Power Supply</h6>
+            <p>
+              As apposed to the 8-way AA power supply we're currently using in our prototype, we would use a LIPO Battery 11.1V 1800mAh LB-012<sup><a class="u u-C blue-link"
+                  href="https://www.robotis.us/lipo-battery-11-1v-1800mah-lb-012/">5</a></sup>.
+              This would provide us with the long battery life we desired.
             </p>
           </div>
           <div class="col-6">
             <div class="space"></div>
-            <table class="table  small bordered">
-              <thead>
-                <tr>
-                  <th><abbr title="Title1">T1</abbr></th>
-                  <th><abbr title="Title2">T2</abbr></th>
-                  <th><abbr title="Title3">T3</abbr></th>
-                  <th><abbr title="Title4">T4</abbr></th>
-                  <th><abbr title="Title5">T5</abbr></th>
-                  <th><abbr title="Short">S</abbr></th>
-                  <th>Notes</th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th><abbr title="Title1">T1</abbr></th>
-                  <th><abbr title="Title2">T2</abbr></th>
-                  <th><abbr title="Title3">T3</abbr></th>
-                  <th><abbr title="Title4">T4</abbr></th>
-                  <th><abbr title="Title5">T5</abbr></th>
-                  <th><abbr title="Short">S</abbr></th>
-                  <th>Notes</th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <th>1</th>
-                  <td>Row:1 Cell:1</td>
-                  <td>Row:1 Cell:2</td>
-                  <td>Row:1 Cell:3</td>
-                  <td>Row:1 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:1 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>2</th>
-                  <td>Row:2 Cell:1</td>
-                  <td>Row:2 Cell:2</td>
-                  <td>Row:2 Cell:3</td>
-                  <td>Row:2 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:2 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>3</th>
-                  <td>Row:3 Cell:1</td>
-                  <td>Row:3 Cell:2</td>
-                  <td>Row:3 Cell:3</td>
-                  <td>Row:3 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:3 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>4</th>
-                  <td>Row:4 Cell:1</td>
-                  <td>Row:4 Cell:2</td>
-                  <td>Row:4 Cell:3</td>
-                  <td>Row:4 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:4 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>5</th>
-                  <td>Row:5 Cell:1</td>
-                  <td>Row:5 Cell:2</td>
-                  <td>Row:5 Cell:3</td>
-                  <td>Row:5 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:5 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>6</th>
-                  <td>Row:6 Cell:1</td>
-                  <td>Row:6 Cell:2</td>
-                  <td>Row:6 Cell:3</td>
-                  <td>Row:6 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:6 Cell:5</td>
-                </tr>
-              </tbody>
-            </table>
+            <figure class="fig">
+              <table class="table  small bordered">
+                <thead>
+                  <tr>
+                    <th><abbr title="Title1">T1</abbr></th>
+                    <th><abbr title="Title2">T2</abbr></th>
+                    <th><abbr title="Title3">T3</abbr></th>
+                    <th><abbr title="Title4">T4</abbr></th>
+                    <th><abbr title="Title5">T5</abbr></th>
+                    <th><abbr title="Short">S</abbr></th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th><abbr title="Title1">T1</abbr></th>
+                    <th><abbr title="Title2">T2</abbr></th>
+                    <th><abbr title="Title3">T3</abbr></th>
+                    <th><abbr title="Title4">T4</abbr></th>
+                    <th><abbr title="Title5">T5</abbr></th>
+                    <th><abbr title="Short">S</abbr></th>
+                    <th>Notes</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>Row:1 Cell:1</td>
+                    <td>Row:1 Cell:2</td>
+                    <td>Row:1 Cell:3</td>
+                    <td>Row:1 Cell:4</td>
+                    <td>S</td>
+                    <td>Row:1 Cell:5</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Row:2 Cell:1</td>
+                    <td>Row:2 Cell:2</td>
+                    <td>Row:2 Cell:3</td>
+                    <td>Row:2 Cell:4</td>
+                    <td>S</td>
+                    <td>Row:2 Cell:5</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>Row:3 Cell:1</td>
+                    <td>Row:3 Cell:2</td>
+                    <td>Row:3 Cell:3</td>
+                    <td>Row:3 Cell:4</td>
+                    <td>S</td>
+                    <td>Row:3 Cell:5</td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>Row:4 Cell:1</td>
+                    <td>Row:4 Cell:2</td>
+                    <td>Row:4 Cell:3</td>
+                    <td>Row:4 Cell:4</td>
+                    <td>S</td>
+                    <td>Row:4 Cell:5</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>Row:5 Cell:1</td>
+                    <td>Row:5 Cell:2</td>
+                    <td>Row:5 Cell:3</td>
+                    <td>Row:5 Cell:4</td>
+                    <td>S</td>
+                    <td>Row:5 Cell:5</td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>Row:6 Cell:1</td>
+                    <td>Row:6 Cell:2</td>
+                    <td>Row:6 Cell:3</td>
+                    <td>Row:6 Cell:4</td>
+                    <td>S</td>
+                    <td>Row:6 Cell:5</td>
+                  </tr>
+                </tbody>
+              </table>
+              <figcaption class="fig-caption u-text-center">
+                Table 1: Real Build Cost Breakdown
+              </figcaption>
+            </figure>
           </div>
         </div>
 
@@ -896,8 +1002,8 @@
           </div>
         </div>
 
-        <div class="row" style="overflow-x:scroll">
-          <div class="col-6">
+        <div class="row">
+          <div class="col-12">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptas, a! Consequatur, similique ab blanditiis quos deleniti sapiente ducimus aliquid saepe ut qui quae quidem, dolor tenetur, nihil nemo fugit. Lorem ipsum dolor sit
               amet, consectetur adipisicing elit. Porro ut consectetur excepturi? Aliquid veniam quos tenetur facilis architecto! Dolorum debitis excepturi fugit dignissimos voluptatum libero dolore eius est deleniti neque. Lorem ipsum dolor sit
               amet, consectetur adipisicing elit. Soluta maiores quaerat eligendi dolores facilis quia itaque dolor sequi harum, odit voluptate ipsam porro quos consequatur, blanditiis sapiente nulla dolore. Dolor.
@@ -907,88 +1013,222 @@
               amet, consectetur adipisicing elit. Soluta maiores quaerat eligendi dolores facilis quia itaque dolor sequi harum, odit voluptate ipsam porro quos consequatur, blanditiis sapiente nulla dolore. Dolor.
             </p>
           </div>
+        </div>
+
+        <div class="row" style="overflow-x:scroll">
           <div class="col-6">
-            <div class="space"></div>
-            <table class="table  small bordered">
-              <thead>
-                <tr>
-                  <th><abbr title="Title1">T1</abbr></th>
-                  <th><abbr title="Title2">T2</abbr></th>
-                  <th><abbr title="Title3">T3</abbr></th>
-                  <th><abbr title="Title4">T4</abbr></th>
-                  <th><abbr title="Title5">T5</abbr></th>
-                  <th><abbr title="Short">S</abbr></th>
-                  <th>Notes</th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th><abbr title="Title1">T1</abbr></th>
-                  <th><abbr title="Title2">T2</abbr></th>
-                  <th><abbr title="Title3">T3</abbr></th>
-                  <th><abbr title="Title4">T4</abbr></th>
-                  <th><abbr title="Title5">T5</abbr></th>
-                  <th><abbr title="Short">S</abbr></th>
-                  <th>Notes</th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <th>1</th>
-                  <td>Row:1 Cell:1</td>
-                  <td>Row:1 Cell:2</td>
-                  <td>Row:1 Cell:3</td>
-                  <td>Row:1 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:1 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>2</th>
-                  <td>Row:2 Cell:1</td>
-                  <td>Row:2 Cell:2</td>
-                  <td>Row:2 Cell:3</td>
-                  <td>Row:2 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:2 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>3</th>
-                  <td>Row:3 Cell:1</td>
-                  <td>Row:3 Cell:2</td>
-                  <td>Row:3 Cell:3</td>
-                  <td>Row:3 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:3 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>4</th>
-                  <td>Row:4 Cell:1</td>
-                  <td>Row:4 Cell:2</td>
-                  <td>Row:4 Cell:3</td>
-                  <td>Row:4 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:4 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>5</th>
-                  <td>Row:5 Cell:1</td>
-                  <td>Row:5 Cell:2</td>
-                  <td>Row:5 Cell:3</td>
-                  <td>Row:5 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:5 Cell:5</td>
-                </tr>
-                <tr>
-                  <th>6</th>
-                  <td>Row:6 Cell:1</td>
-                  <td>Row:6 Cell:2</td>
-                  <td>Row:6 Cell:3</td>
-                  <td>Row:6 Cell:4</td>
-                  <td>S</td>
-                  <td>Row:6 Cell:5</td>
-                </tr>
-              </tbody>
-            </table>
+            <figure class="fig">
+              <table class="table  small bordered">
+                <thead>
+                  <tr>
+                    <th><abbr title="Title1">Item</abbr></th>
+                    <th><abbr title="Title2">#</abbr></th>
+                    <th><abbr title="Title3">Cost (£GBP)</abbr></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th><abbr title="Title1">Item</abbr></th>
+                    <th><abbr title="Title2">#</abbr></th>
+                    <th><abbr title="Title3">Cost (£GBP)</abbr></th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>Lift Motor</th>
+                    <td>1</td>
+                    <td>27.05</td>
+                  </tr>
+                  <tr>
+                    <th>6mm+8mm Bright Steel Round Bar</th>
+                    <td>1</td>
+                    <td>15.00</td>
+                  </tr>
+                  <tr>
+                    <th>MDF (per 8ft x 6ft x 12mm sheet)</th>
+                    <td>1</td>
+                    <td>11.00</td>
+                  </tr>
+                  <tr>
+                    <th>12mm Thk T6 Aluminium Plate </th>
+                    <td>1</td>
+                    <td>10.00</td>
+                  </tr>
+                  <tr>
+                    <th>3D printed material (5p per gram)</th>
+                    <td>1</td>
+                    <td>2.50</td>
+                  </tr>
+                  <tr>
+                    <th>ON Semi PN2222ATA NPN Transistor</th>
+                    <td>4</td>
+                    <td>0.80</td>
+                  </tr>
+                  <tr>
+                    <th>ON Semi 2N4403TA PNP Transistor</th>
+                    <td>2</td>
+                    <td>0.16</td>
+                  </tr>
+                  <tr>
+                    <th>Nichicon 1F Electrolytic Capacitor</th>
+                    <td>1</td>
+                    <td>0.75</td>
+                  </tr>
+                  <tr>
+                    <th>Vishay 50V 1A, Diode 1N4001-E3/54</th>
+                    <td>4</td>
+                    <td>0.80</td>
+                  </tr>
+                  <tr>
+                    <th>Custom PCB</th>
+                    <td>1</td>
+                    <td>2.00</td>
+                  </tr>
+                  <tr>
+                    <th>Steel Plates</th>
+                    <td>6</td>
+                    <td>45.00</td>
+                  </tr>
+                  <tr>
+                    <th>UV Sterilizer LED</th>
+                    <th>2</td>
+                    <td>18.30</d>
+                  </tr>
+                  <tr>
+                    <th>Door Spindle</th>
+                    <td>1</td>
+                    <td>8.40</td>
+                  </tr>
+                  <tr>
+                    <th>Magnetic Lock</th>
+                    <td>1</td>
+                    <td>7.00</td>
+                  </tr>
+                  <tr>
+                    <th>6mm Springs</th>
+                    <td>4</td>
+                    <td>12.00</td>
+                  </tr>
+                  <tr>
+                    <th>Particle Photon</th>
+                    <td>1</td>
+                    <td>14.34</d>
+                  </tr>
+                  <tr>
+                    <th>TOTAL</th>
+                    <th>-</th>
+                    <th>175.10</th>
+                  </tr>
+                </tbody>
+              </table>
+              <figcaption class="fig-caption u-text-center">
+                Table 2: Demo 1 Cost Breakdown
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-6">
+            <figure class="fig">
+              <table class="table  small bordered">
+                <thead>
+                  <tr>
+                    <th><abbr title="Title1">Item</abbr></th>
+                    <th><abbr title="Title2">#</abbr></th>
+                    <th><abbr title="Title3">Cost (£GBP)</abbr></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th><abbr title="Title1">Item</abbr></th>
+                    <th><abbr title="Title2">#</abbr></th>
+                    <th><abbr title="Title3">Cost (£GBP)</abbr></th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>Metal Work [Lock]</th>
+                    <td>2</td>
+                    <td>20.00</td>
+                  </tr>
+                  <tr>
+                    <th>Standard Deadbolt Lock</th>
+                    <td>2</td>
+                    <td>50.00</td>
+                  </tr>
+                  <tr>
+                    <th>Solenoid</th>
+                    <td>2</td>
+                    <td>50.00</td>
+                  </tr>
+                  <tr>
+                    <th>Electronics And Wiring [Lock]</th>
+                    <td>-</td>
+                    <td>10.00</td>
+                  </tr>
+                  <tr>
+                    <th>Motor [Fork Lift]</th>
+                    <td>1</td>
+                    <td>35.00</td>
+                  </tr>
+                  <tr>
+                    <th>Lego Set [Fork Lift]</th>
+                    <td>1</td>
+                    <td>15.00</td>
+                  </tr>
+                  <tr>
+                    <th>Motor Board [Fork Lift]</th>
+                    <td>1</td>
+                    <td>10.00</td>
+                  </tr>
+                  <tr>
+                    <th>Basic Sensors</th>
+                    <td>-</td>
+                    <td>10.00</td>
+                  </tr>
+                  <tr>
+                    <th>Advanced Sensors</th>
+                    <td>-</td>
+                    <td>30.00</td>
+                  </tr>
+                  <tr>
+                    <th>Encoder Board [Fork Lift]</th>
+                    <td>1</td>
+                    <td>10.00</td>
+                  </tr>
+                  <tr>
+                    <th>Miscellaneous [Fork Lift]</th>
+                    <td>-</td>
+                    <td>10.00</td>
+                  </tr>
+                  <tr>
+                    <th>Particle Photon</th>
+                    <td>1</td>
+                    <td>18.67</td>
+                  </tr>
+                  <tr>
+                    <th>Technician time [Fork Lift]</th>
+                    <td>-</td>
+                    <td>3 hours*</td>
+                  </tr>
+                  <tr>
+                    <th>TOTAL</th>
+                    <th>-</th>
+                    <th>258.67</th>
+                  </tr>
+                </tbody>
+              </table>
+              <figcaption class="fig-caption u-text-center">
+                Table 3: Demo 4 Cost Breakdown (*Technician time budget is in hours, not £GBP)
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 u-center">
+            <div id="piechart-budget"></div>
+          </div>
+          <div class="col-6 u-center">
+            <div id="piechart-tech"></div>
           </div>
         </div>
 
@@ -1661,49 +1901,49 @@
             <div class="space"></div>
             <figure class="fig">
               <table class="table small bordered">
-              <thead>
-                <tr>
-                  <th><abbr title="Title1">Parcel Type</abbr></th>
-                  <th><abbr title="Title2">Volume (L)</abbr></th>
-                  <th><abbr title="Title3">Process Time*</abbr></th>
-                  <th><abbr title="Title4">Error (Y/N)</abbr></th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th><abbr title="Title1">Parcel Type</abbr></th>
-                  <th><abbr title="Title2">Volume (L)</abbr></th>
-                  <th><abbr title="Title3">Process Time*</abbr></th>
-                  <th><abbr title="Title4">Error (Y/N)</abbr></th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <th>Letter</th>
-                  <td>2.2</td>
-                  <td>5 + 10</td>
-                  <td>N</td>
-                </tr>
-                <tr>
-                  <th>Small</th>
-                  <td>25</td>
-                  <td>7 + 20</td>
-                  <td>N</td>
-                </tr>
-                <tr>
-                  <th>Medium</th>
-                  <td>129</td>
-                  <td>10 + 30</td>
-                  <td>N</td>
-                </tr>
-                <tr>
-                  <th>Large</th>
-                  <td>3375</td>
-                  <td>N/A</td>
-                  <td>Y (Too big)</td>
-                </tr>
-              </tbody>
-            </table>
+                <thead>
+                  <tr>
+                    <th><abbr title="Title1">Parcel Type</abbr></th>
+                    <th><abbr title="Title2">Volume (L)</abbr></th>
+                    <th><abbr title="Title3">Process Time*</abbr></th>
+                    <th><abbr title="Title4">Error (Y/N)</abbr></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th><abbr title="Title1">Parcel Type</abbr></th>
+                    <th><abbr title="Title2">Volume (L)</abbr></th>
+                    <th><abbr title="Title3">Process Time*</abbr></th>
+                    <th><abbr title="Title4">Error (Y/N)</abbr></th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>Letter</th>
+                    <td>2.2</td>
+                    <td>5 + 10</td>
+                    <td>N</td>
+                  </tr>
+                  <tr>
+                    <th>Small</th>
+                    <td>25</td>
+                    <td>7 + 20</td>
+                    <td>N</td>
+                  </tr>
+                  <tr>
+                    <th>Medium</th>
+                    <td>129</td>
+                    <td>10 + 30</td>
+                    <td>N</td>
+                  </tr>
+                  <tr>
+                    <th>Large</th>
+                    <td>3375</td>
+                    <td>N/A</td>
+                    <td>Y (Too big)</td>
+                  </tr>
+                </tbody>
+              </table>
               <figcaption class="fig-caption u-text-center">
                 Table 2: Evaluation of different size parcels (*Process Time is denoted as conveying + UV sanitation)
               </figcaption>
